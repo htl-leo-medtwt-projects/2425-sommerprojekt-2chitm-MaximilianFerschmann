@@ -1,0 +1,39 @@
+**Projektantrag: KTM Informations-Website**
+
+**1. Projekttitel:**  
+KTM-Informations-Website – Alles über KTM Motorräder und deren Motoren
+
+**2. Projektbeschreibung:**  
+Die KTM-Informations-Website wird eine umfassende Online-Plattform bieten.
+
+**3. Projektziele:**  
+- Bereitstellung einer zentralen Anlaufstelle für KTM-Fans und Interessierte.
+- Detaillierte Darstellung von KTM-Modellen inklusive technischer Daten.
+- Einbindung von News und Updates aus der Motorradwelt.
+- Log in Funktion mit Accounts
+
+**4. Zielgruppe:**  
+- Motorrad-Enthusiasten und KTM-Fans.
+- Potenzielle Käufer von KTM-Motorrädern.
+- Mechaniker und Werkstätten mit Fokus auf KTM-Modelle.
+- Motorsport-Interessierte.
+
+**5. Projektumfang:**  
+Die Website wird folgende Hauptbereiche umfassen:
+- **Startseite:** Überblick über aktuelle KTM-News und Highlights.
+- **Modellübersicht:** Detailseiten zu verschiedenen KTM-Motorrädern.
+- **Technische Daten:** Umfangreiche Datenbank mit Vergleichsmöglichkeiten.
+- **Personalisierte Inhalte:** Benutzerdefinierte Inhalte basierend auf Log in
+
+**6. Technische Umsetzung:**  
+- Programmiersprache: HTML, CSS, JavaScript
+- Responsive Design für PC Tablet und Handy
+- Dynamische Contentgenerierung basierend auf Log in
+
+
+**7. Erwartete Ergebnisse/Ziele:**  
+- Eine gut strukturierte, informative und nutzerfreundliche Website.
+- Farblich gut abgestimmtes Design, das die Marke KTM widerspiegelt.
+- Eine einfache und sichere Log in (zB.: Passwörter werden nur gehasht im Localstorage zu sehen sein) Funktion für Benutzer.
+
+
