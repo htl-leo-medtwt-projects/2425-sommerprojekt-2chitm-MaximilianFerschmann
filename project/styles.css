@@ -43,6 +43,13 @@ h2{
     font-weight: lighter;
     font-size: 2em;
 }
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: lighter;
+    opacity: 0.8;
+
+}
 #wrapper nav{
     width: 80%;
     margin: 1em;
@@ -84,8 +91,15 @@ h2{
     flex-direction: column;
     width: 30%;
 }
+#home-slider{
+    justify-content: start;
+    height: 60vh;
+}
 #leftInfo{
     align-items: start;
+}
+#rightInfo{
+    align-items: end;
 }
 #home-slider-image{
     width: 22vw;
@@ -109,4 +123,14 @@ h2{
     border-radius: 10px;
     border: 2px solid var(--hellorange);
 
+}
+#create-bike{
+    margin: 8vh 0;
+}
+#search-helmet{
+    margin: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: end;
 }
