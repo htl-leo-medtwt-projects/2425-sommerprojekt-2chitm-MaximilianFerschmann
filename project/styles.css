@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Spaceport';
+    src: url('Fonts/Spaceport1.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('Fonts/Roboto-VariableFont_wdth\,wght.ttf');
+}
+@font-face {
+    font-family: 'Righteous';
+    src: url('Fonts/Righteous-Regular.ttf');
+}
+:root {
+    --scharz: #151008;  /* Schwarzbraun */
+    --weiß: #fdf8ef;  /* Cremeweiß */
+    --hellorange: #f5a400;  /* Leuchtendes Orange */
+    --grau: #4a4a4a;  /* Dunkelgrau */
+    --gold: #ffc55c;  /* Helles Goldgelb */
+    --orange: #f15a24;  /* Knalliges Orange */
+}
+
+
+body{
+    margin: 0;
+    background: rgb(242,119,26);
+    background: linear-gradient(180deg, rgba(242,119,26,1) 23%, rgba(210,210,210,1) 100%);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 10vw;
+}
+#wrapper{
+    width: 80vw;
+    border-radius: 5px;
+    background: white;
+}
+h1{
+    font-family: 'Spaceport', sans-serif;
+}
+h2{
+    font-family: 'Righteous', sans-serif;
+}
+#wrapper nav{
+    width: 80%;
+    margin: 1em;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+#wrapper nav a{
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    text-decoration: none;
+    transition: text-decoration 0.5s;
+}
+#wrapper nav #homelink{
+    font-size: 4em;
+    font-weight: lighter;
+    font-family: 'Spaceport', sans-serif;
+}
+#wrapper nav a:hover{
+    text-decoration: underline 2px var(--orange);
+}
+#wrapper nav #homelink:hover{
+    text-decoration: none;
+}
+
+#start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+#leftInfo, #home-slider, #rightInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+}
