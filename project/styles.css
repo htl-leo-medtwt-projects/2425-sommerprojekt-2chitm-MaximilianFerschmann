@@ -13,7 +13,7 @@
 :root {
     --scharz: #151008;  /* Schwarzbraun */
     --weiß: #fdf8ef;  /* Cremeweiß */
-    --hellorange: #f5a400;  /* Leuchtendes Orange */
+    --hellorange: #e69900;  /* Leuchtendes Orange */
     --grau: #4a4a4a;  /* Dunkelgrau */
     --gold: #ffc55c;  /* Helles Goldgelb */
     --orange: #f15a24;  /* Knalliges Orange */
@@ -36,9 +36,12 @@ body{
 }
 h1{
     font-family: 'Spaceport', sans-serif;
+    font-size: 3.5em;
 }
 h2{
     font-family: 'Righteous', sans-serif;
+    font-weight: lighter;
+    font-size: 2em;
 }
 #wrapper nav{
     width: 80%;
@@ -72,6 +75,7 @@ h2{
     justify-content: center;
     align-items: center;
     padding: 2em;
+    margin-top: 10vh;
 }
 #leftInfo, #home-slider, #rightInfo{
     display: flex;
@@ -79,4 +83,30 @@ h2{
     align-items: center;
     flex-direction: column;
     width: 30%;
+}
+#leftInfo{
+    align-items: start;
+}
+#home-slider-image{
+    width: 22vw;
+}
+#helmet-slider-image{
+    width: 7vw;
+    position: relative;
+    right: 0.5vw;
+}
+#helmet-slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12vw;
+}
+.learn-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em 5em;
+    border-radius: 10px;
+    border: 2px solid var(--hellorange);
+
 }
