@@ -59,7 +59,7 @@ p{
     align-items: center;    
 }
 #wrapper nav a{
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: 'Roboto', sans-serif;
     color: #000000;
     text-decoration: none;
@@ -115,15 +115,6 @@ p{
     align-items: center;
     width: 12vw;
 }
-.learn-more{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8em 5em;
-    border-radius: 10px;
-    border: 2px solid var(--hellorange);
-
-}
 #create-bike{
     margin: 8vh 0;
 }
@@ -134,3 +125,44 @@ p{
     width: 80%;
     align-items: end;
 }
+/* From Uiverse.io by cssbuttons-io */ 
+.learn-more {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .learn-more:hover {
+    background-color: var(--hellorange);
+    box-shadow: 0px 15px 20px var(--orange);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .learn-more:active {
+    transform: translateY(-1px);
+  }
+  .slider-button-left, .slider-button-right{
+    border: none;
+    background-color: transparent;
+    font-size: 1.8em;
+    transition: all 0.5s;
+}
+.slider-button-left:hover, .slider-button-right:hover{
+    color: var(--orange);
+    cursor: pointer;
+}
+.slider-button-left:active, .slider-button-right:active{
+    transform: translateY(0.2vh);
+}
+  
