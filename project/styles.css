@@ -27,15 +27,25 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10vh 10vw;
+    padding: 20vh 10vw;
+    overflow-x: hidden;
 }
-footer{
-    background-color: var(--scharz);
-}
+
+
 #wrapper{
-    width: 80vw;
+    width: 70vw;
     border-radius: 5px;
     background: white;
+    
+}
+footer{
+    background-color: black;
+    color: var(--weiß);
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 15vw;
 }
 h1{
     font-family: 'Spaceport', sans-serif;
@@ -53,6 +63,93 @@ p{
     opacity: 0.8;
 
 }
+/*Design Background*/
+.backgroundKTM{
+    position: absolute;
+    z-index: -1;
+    font-family: 'Righteos', sans-serif;
+    font-weight: 1000;
+
+}
+
+.backgroundKTM:nth-child(2) {
+    /* Beispiel-Stile */
+    top: 5vh;
+    left: 5vw;
+    font-size: 7em;
+    color: transparent; /* Innen transparent machen */
+    -webkit-text-stroke: 3px var(--scharz);
+}
+
+.backgroundKTM:nth-child(3) {
+    top: 15vh;
+    left: 85vw;
+    font-size: 6em;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--weiß);
+}
+.backgroundKTM:nth-child(4) {
+    top: 100vh;
+    left: 0vw;
+    font-size: 7em;
+    color: var(--weiß);
+}
+.backgroundKTM:nth-child(5) {
+    top: 100vh;
+    left: 80vw;
+    font-size: 7em;
+    color: var(--scharz);
+}
+.backgroundKTM:nth-child(6) {
+    top: 120vh;
+    left: 0vw;
+    font-size: 8em;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--scharz);
+}
+.backgroundKTM:nth-child(7) {
+    top: 120vh;
+    left: 80vw;
+    font-size: 8em;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--weiß);
+}
+.backgroundKTM:nth-child(8) {
+    top: 140vh;
+    left: 0vw;
+    font-size: 9em;
+    color: var(--scharz);
+}
+.backgroundKTM:nth-child(9) {
+    top: 140vh;
+    left: 80vw;
+    font-size: 9em;
+    color: var(--weiß);
+}
+.backgroundKTM:nth-child(10) {
+    top: 200vh;
+    left: -13vw;
+    font-size: 15em;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--weiß);
+    transform: rotate(-90deg);
+}
+.backgroundKTM:nth-child(11) {
+    top: 200vh;
+    left: 72vw;
+    font-size: 15em;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--weiß);
+    transform: rotate(90deg);
+}
+
+/* Füge weitere nth-child-Selektoren hinzu, wie benötigt */
+
+
+
+
+
+
 #wrapper nav{
     width: 80%;
     margin: 1em;
@@ -257,6 +354,19 @@ p{
     background-color: var(--scharz);
     height: 3vh;
 }
+#footer-image{
+    width: 50%;
+
+}
+.socials img{
+    width:2vw;
+}
+footer section{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
 
 
   
