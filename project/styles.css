@@ -73,7 +73,6 @@ p{
 }
 
 .backgroundKTM:nth-child(2) {
-    /* Beispiel-Stile */
     top: 5vh;
     left: 5vw;
     font-size: 7em;
@@ -142,12 +141,6 @@ p{
     -webkit-text-stroke: 3px var(--weiß);
     transform: rotate(90deg);
 }
-
-/* Füge weitere nth-child-Selektoren hinzu, wie benötigt */
-
-
-
-
 
 
 #wrapper nav{
