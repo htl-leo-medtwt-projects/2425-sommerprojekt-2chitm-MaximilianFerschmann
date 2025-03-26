@@ -1,0 +1,178 @@
+[
+    {
+        "id": 1,
+        "name": "KTM EXC 300",
+        "takte": 2,
+        "series": "EXC",
+        "year": 2019,
+        "price": 10000
+    },
+    {
+        "id": 2,
+        "name": "KTM EXC 250",
+        "takte": 2,
+        "series": "EXC",
+        "year": 2019,
+        "price": 9000
+    },
+    {
+        "id": 3,
+        "name": "KTM EXC 450",
+        "takte": 4,
+        "series": "EXC",
+        "year": 2019,
+        "price": 11000
+    },
+    {
+        "id": 4,
+        "name": "KTM EXC 500",
+        "takte": 4,
+        "series": "EXC",
+        "year": 2019,
+        "price": 12000
+    },
+    {
+        "id": 5,
+        "name": "KTM EXC 350",
+        "takte": 4,
+        "series": "EXC",
+        "year": 2019,
+        "price": 10500
+    },
+    {
+        "id": 6,
+        "name": "KTM EXC 530",
+        "takte": 4,
+        "series": "EXC",
+        "year": 2019,
+        "price": 13000
+    },
+    {
+        "id": 7,
+        "name": "KTM EXC 525",
+        "takte": 4,
+        "series": "EXC",
+        "year": 2019,
+        "price": 12500
+    },
+    {
+        "id": 8,
+        "name": "KTM EXC 520",
+        "takte": 4,
+        "series": "EXC",
+        "year": 2019,
+        "price": 12500
+    },
+    {
+        "id": 9,
+        "name": "KTM EXC 400",
+        "takte": 4,
+        "series": "EXC",
+        "year": 2019,
+        "price": 11000
+    },
+    {
+        "id": 10,
+        "name": "KTM EXC 300",
+        "takte": 2,
+        "series": "EXC",
+        "year": 2018,
+        "price": 9500
+    },
+    {
+        "id": 11,
+        "name": "KTM EXC 250",
+        "takte": 2,
+        "series": "EXC",
+        "year": 2018,
+        "price": 8500
+    },
+    {
+        "id": 12,
+        "name": "KTM EXC 450",
+        "takte": 4,
+        "series": "EXC",
+        "year": 2018,
+        "price": 10500
+    },
+    {
+        "id": 13,
+        "name": "KTM EXC 500",
+        "takte": 4,
+        "series": "EXC",
+        "year": 2018,
+        "price": 11500
+    },
+    {
+        "id": 14,
+        "name": "KTM EXC 350",
+        "takte": 4,
+        "series": "EXC",
+        "year": 2018,
+        "price": 10000
+    },
+    {
+        "id": 15,
+        "name": "KTM Duke 125",
+        "takte": 4,
+        "series": "Duke",
+        "year": 2019,
+        "price": 4000
+    },
+    {
+        "id": 16,
+        "name": "KTM Duke 200",
+        "takte": 4,
+        "series": "Duke",
+        "year": 2019,
+        "price": 5000
+    },
+    {
+        "id": 17,
+        "name": "KTM Duke 250",
+        "takte": 4,
+        "series": "Duke",
+        "year": 2019,
+        "price": 6000
+    },
+    {
+        "id": 18,
+        "name": "KTM Duke 390",
+        "takte": 4,
+        "series": "Duke",
+        "year": 2019,
+        "price": 7000
+    },
+    {
+        "id": 19,
+        "name": "KTM Duke 125",
+        "takte": 4,
+        "series": "Duke",
+        "year": 2018,
+        "price": 3500
+    },
+    {
+        "id": 20,
+        "name": "KTM Duke 200",
+        "takte": 4,
+        "series": "Duke",
+        "year": 2018,
+        "price": 4500
+    },
+    {
+        "id": 21,
+        "name": "KTM Duke 250",
+        "takte": 4,
+        "series": "Duke",
+        "year": 2018,
+        "price": 5500
+    },
+    {
+        "id": 22,
+        "name": "KTM Duke 390",
+        "takte": 4,
+        "series": "Duke",
+        "year": 2018,
+        "price": 6500
+    }
+]
