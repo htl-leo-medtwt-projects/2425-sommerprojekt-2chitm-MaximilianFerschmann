@@ -10,16 +10,20 @@
 </head>
 <body>
     <a href="../index.html">Back</a>
-    <h1>KTM Bikes</h1>
     <div id="filter">
+        <div>
         <label for="filter-input">Filter by name:</label>
-        <input type="text" id="filter-input" placeholder="Enter bike name...">        
+        <input type="text" id="filter-input" placeholder="Enter bike name...">   
+        </div>
+        <div>     
         <label for="strokes">Strokes:</label>
         <select id="strokes">
             <option value="all">All</option>
             <option value="2">2 Stroke</option>
             <option value="4">4 Stroke</option>
         </select>
+        </div>
+        <div>
         <label for="maxccm">Max cm³:</label>
         <select id="maxccm">
             <option value="all">All</option>
@@ -30,6 +34,8 @@
             <option value="800">800</option>
             <option value="1000">1000</option>
         </select>
+        </div>
+        <div>
         <label for="minccm">Min cm³:</label>
         <select id="minccm">
             <option value="all">All</option>
@@ -41,6 +47,8 @@
             <option value="800">800</option>
             <option value="1000">1000</option>
         </select>
+        </div>
+        <div>
         <label for="maxprice">Max price:</label>
         <select id="maxprice">
             <option value="all">All</option>
@@ -52,6 +60,8 @@
             <option value="15000">15000</option>
             <option value="20000">20000</option>
         </select>
+        </div>
+        <div>
         <label for="minprice">Min price:</label>
         <select id="minprice">
             <option value="all">All</option>
@@ -63,6 +73,8 @@
             <option value="15000">15000</option>
             <option value="20000">20000</option>
         </select>
+        </div>
+        <div>
         <label for="bike-model">Model</label>
         <select id="bike-model">
             <option value="all">All</option>
@@ -71,8 +83,10 @@
             <option value="Enduro">Enduro</option>
             <option value="Adventure">Adventure</option>
             <option value="RC">RC</option>
-        </select>        
+        </select>  
+        </div>      
     </div>
+    <button id="search">Suchen</button>
     <div id="bikesContainer">
         
     </div>

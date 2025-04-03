@@ -16,11 +16,7 @@ function loadAllBikes(){
                 <div class="bike-item">
                     <img src="../${bike.image}" alt="${bike.name}">
                     <h3>${bike.model}</h3>
-                    <p>${bike.stroke}</p>
-                    <p>Price: ${bike.price}€</p>
-                    <p>Horsepower: ${bike.hp}</p>
-                    <p>Weight: ${bike.weight}</p>
-                    <button class="like">Like</button>
+                    <button> Show Details </button>
                 </div>
             `;
                      

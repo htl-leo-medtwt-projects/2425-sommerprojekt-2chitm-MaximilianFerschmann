@@ -1,153 +1,202 @@
 [
-    {
-      "model": "KTM 125 SX",
-      "type": "SX",
-      "cc": 125,
-      "hp": 40,
-      "stroke": "2-Stroke",
-      "weight": 87,
-      "price": 8599,
-      "image": "Images/Bikes/125SX.png"
-    },
-    {
-      "model": "KTM 150 SX",
-      "type": "SX",
-      "cc": 150,
-      "hp": 42,
-      "stroke": "2-Stroke",
-      "weight": 89,
-      "price": 8999,
-      "image": "Images/Bikes/150SX.png"
-    },
-    {
-      "model": "KTM 250 SX",
-      "type": "SX",
-      "cc": 250,
-      "hp": 50,
-      "stroke": "2-Stroke",
-      "weight": 95,
-      "price": 9999,
-      "image": "Images/Bikes/250SX.png"
-    },
-    {
-      "model": "KTM 300 SX",
-      "type": "SX",
-      "cc": 300,
-      "hp": 55,
-      "stroke": "2-Stroke",
-      "weight": 96,
-      "price": 10499,
-      "image": "Images/Bikes/300SX.png"
-    },
-    {
-      "model": "KTM 250 EXC",
-      "type": "EXC",
-      "cc": 250,
-      "hp": 52,
-      "stroke": "2-Stroke",
-      "weight": 103,
-      "price": 10799,
-      "image": "Images/Bikes/250EXC.png"
-    },
-    {
-      "model": "KTM 300 EXC",
-      "type": "EXC",
-      "cc": 300,
-      "hp": 57,
-      "stroke": "2-Stroke",
-      "weight": 105,
-      "price": 11299,
-      "image": "Images/Bikes/300EXC.png"
-    },
-    {
-      "model": "KTM 350 EXC-F",
-      "type": "EXC-F",
-      "cc": 350,
-      "hp": 45,
-      "stroke": "4-Stroke",
-      "weight": 107,
-      "price": 11599,
-      "image": "Images/Bikes/350EXC-F.png"
-    },
-    {
-      "model": "KTM 450 EXC-F",
-      "type": "EXC-F",
-      "cc": 450,
-      "hp": 50,
-      "stroke": "4-Stroke",
-      "weight": 109,
-      "price": 11999,
-      "image": "Images/Bikes/450EXC-F.png"
-    },
-    {
-      "model": "KTM 500 EXC-F",
-      "type": "EXC-F",
-      "cc": 500,
-      "hp": 60,
-      "stroke": "4-Stroke",
-      "weight": 111,
-      "price": 12499,
-      "image": "Images/Bikes/500EXC-F.png"
-    },
-    {
-      "model": "KTM 690 Enduro R",
-      "type": "Enduro R",
-      "cc": 690,
-      "hp": 74,
-      "stroke": "4-Stroke",
-      "weight": 146,
-      "price": 12999,
-      "image": "Images/Bikes/690EnduroR.png"
-    },
-    {
-      "model": "KTM 890 Adventure",
-      "type": "Adventure",
-      "cc": 889,
-      "hp": 105,
-      "stroke": "4-Stroke",
-      "weight": 196,
-      "price": 13999,
-      "image": "Images/Bikes/890Adventure.png"
-    },
-    {
-      "model": "KTM 890 Adventure R",
-      "type": "Adventure R",
-      "cc": 889,
-      "hp": 105,
-      "stroke": "4-Stroke",
-      "weight": 200,
-      "price": 14499,
-      "image": "Images/Bikes/890AdventureR.png"
-    },
-    {
-      "model": "KTM 1290 Super Adventure S",
-      "type": "Super Adventure S",
-      "cc": 1301,
-      "hp": 160,
-      "stroke": "4-Stroke",
-      "weight": 220,
-      "price": 18999,
-      "image": "Images/Bikes/1290SuperAdventureS.png"
-    },
-    {
-      "model": "KTM 1290 Super Adventure R",
-      "type": "Super Adventure R",
-      "cc": 1301,
-      "hp": 160,
-      "stroke": "4-Stroke",
-      "weight": 221,
-      "price": 19499,
-      "image": "Images/Bikes/1290SuperAdventureR.png"
-    },
-    {
-      "model": "KTM RC 8C",
-      "type": "RC",
-      "cc": 889,
-      "hp": 135,
-      "stroke": "4-Stroke",
-      "weight": 140,
-      "price": 38499,
-      "image": "Images/Bikes/RC8C.png"
-    }
-  ]
-  
+  {
+    "model": "KTM 125 SX",
+    "type": "SX",
+    "cc": 125,
+    "hp": 40,
+    "stroke": "2-Stroke",
+    "weight": 87,
+    "price": 8599,
+    "image": "Images/Bikes/125SX.png"
+  },
+  {
+    "model": "KTM 150 SX",
+    "type": "SX",
+    "cc": 150,
+    "hp": 42,
+    "stroke": "2-Stroke",
+    "weight": 89,
+    "price": 8999,
+    "image": "Images/Bikes/150SX.png"
+  },
+  {
+    "model": "KTM 250 SX",
+    "type": "SX",
+    "cc": 250,
+    "hp": 50,
+    "stroke": "2-Stroke",
+    "weight": 95,
+    "price": 9999,
+    "image": "Images/Bikes/250SX.png"
+  },
+  {
+    "model": "KTM 300 SX",
+    "type": "SX",
+    "cc": 300,
+    "hp": 55,
+    "stroke": "2-Stroke",
+    "weight": 96,
+    "price": 10499,
+    "image": "Images/Bikes/300SX.png"
+  },
+  {
+    "model": "KTM 250 EXC",
+    "type": "EXC",
+    "cc": 250,
+    "hp": 52,
+    "stroke": "2-Stroke",
+    "weight": 103,
+    "price": 10799,
+    "image": "Images/Bikes/250EXC.png"
+  },
+  {
+    "model": "KTM 300 EXC",
+    "type": "EXC",
+    "cc": 300,
+    "hp": 57,
+    "stroke": "2-Stroke",
+    "weight": 105,
+    "price": 11299,
+    "image": "Images/Bikes/300EXC.png"
+  },
+  {
+    "model": "KTM 350 EXC-F",
+    "type": "EXC-F",
+    "cc": 350,
+    "hp": 45,
+    "stroke": "4-Stroke",
+    "weight": 107,
+    "price": 11599,
+    "image": "Images/Bikes/350EXC-F.png"
+  },
+  {
+    "model": "KTM 450 EXC-F",
+    "type": "EXC-F",
+    "cc": 450,
+    "hp": 50,
+    "stroke": "4-Stroke",
+    "weight": 109,
+    "price": 11999,
+    "image": "Images/Bikes/450EXC-F.png"
+  },
+  {
+    "model": "KTM 500 EXC-F",
+    "type": "EXC-F",
+    "cc": 500,
+    "hp": 60,
+    "stroke": "4-Stroke",
+    "weight": 111,
+    "price": 12499,
+    "image": "Images/Bikes/500EXC-F.png"
+  },
+  {
+    "model": "KTM 690 Enduro R",
+    "type": "Enduro R",
+    "cc": 690,
+    "hp": 74,
+    "stroke": "4-Stroke",
+    "weight": 146,
+    "price": 12999,
+    "image": "Images/Bikes/690EnduroR.png"
+  },
+  {
+    "model": "KTM 890 Adventure",
+    "type": "Adventure",
+    "cc": 889,
+    "hp": 105,
+    "stroke": "4-Stroke",
+    "weight": 196,
+    "price": 13999,
+    "image": "Images/Bikes/890Adventure.png"
+  },
+  {
+    "model": "KTM 890 Adventure R",
+    "type": "Adventure R",
+    "cc": 889,
+    "hp": 105,
+    "stroke": "4-Stroke",
+    "weight": 200,
+    "price": 14499,
+    "image": "Images/Bikes/890AdventureR.png"
+  },
+  {
+    "model": "KTM 1290 Super Adventure S",
+    "type": "Super Adventure S",
+    "cc": 1301,
+    "hp": 160,
+    "stroke": "4-Stroke",
+    "weight": 220,
+    "price": 18999,
+    "image": "Images/Bikes/1290SuperAdventureS.png"
+  },
+  {
+    "model": "KTM 1290 Super Adventure R",
+    "type": "Super Adventure R",
+    "cc": 1301,
+    "hp": 160,
+    "stroke": "4-Stroke",
+    "weight": 221,
+    "price": 19499,
+    "image": "Images/Bikes/1290SuperAdventureR.png"
+  },
+  {
+    "model": "KTM RC 8C",
+    "type": "RC",
+    "cc": 889,
+    "hp": 135,
+    "stroke": "4-Stroke",
+    "weight": 140,
+    "price": 38499,
+    "image": "Images/Bikes/RC8C.png"
+  },
+  {
+    "model": "KTM 125 Duke",
+    "type": "Duke",
+    "cc": 125,
+    "hp": 15,
+    "stroke": "4-Stroke",
+    "weight": 139,
+    "price": 4699,
+    "image": "Images/Bikes/125Duke.png"
+  },
+  {
+    "model": "KTM 250 Duke",
+    "type": "Duke",
+    "cc": 250,
+    "hp": 30,
+    "stroke": "4-Stroke",
+    "weight": 161,
+    "price": 5999,
+    "image": "Images/Bikes/250Duke.png"
+  },
+  {
+    "model": "KTM 390 Duke",
+    "type": "Duke",
+    "cc": 373,
+    "hp": 44,
+    "stroke": "4-Stroke",
+    "weight": 149,
+    "price": 6999,
+    "image": "Images/Bikes/390Duke.png"
+  },
+  {
+    "model": "KTM 690 Duke",
+    "type": "Duke",
+    "cc": 690,
+    "hp": 73,
+    "stroke": "4-Stroke",
+    "weight": 169,
+    "price": 8499,
+    "image": "Images/Bikes/690Duke.png"
+  },
+  {
+    "model": "KTM 1290 Super Duke R",
+    "type": "Super Duke R",
+    "cc": 1301,
+    "hp": 177,
+    "stroke": "4-Stroke",
+    "weight": 189,
+    "price": 18999,
+    "image": "Images/Bikes/1290SuperDukeR.png"
+  }
+]
