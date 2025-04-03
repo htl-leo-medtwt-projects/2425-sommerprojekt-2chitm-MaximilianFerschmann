@@ -1,12 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KTM | Bikes</title>
-    <script src="../Scripts/bikes.js"></script>
+    <script src="../Scripts/bikes.js" defer></script>
+    <link rel="stylesheet" href="../CSS/bikes.css">
 </head>
 <body>
-    
+    <a href="../index.html">Back</a>
+    <h1>KTM Bikes</h1>
+    <div id="filter">
+        <label for="filter-input">Filter by name:</label>
+        <input type="text" id="filter-input" placeholder="Enter bike name...">        
+        <label for="strokes">Strokes:</label>
+        <select id="strokes">
+            <option value="all">All</option>
+            <option value="2">2 Stroke</option>
+            <option value="4">4 Stroke</option>
+        </select>
+        <label for="maxccm">Max cm³:</label>
+        <select id="maxccm">
+            <option value="all">All</option>
+            <option value="125">125</option>
+            <option value="250">250</option>
+            <option value="300">450</option>
+            <option value="500">500</option>
+            <option value="800">800</option>
+            <option value="1000">1000</option>
+        </select>
+        <label for="minccm">Min cm³:</label>
+        <select id="minccm">
+            <option value="all">All</option>
+            <option value="125">125</option>
+            <option value="250">250</option>
+            <option value="300">300</option>
+            <option value="450">450</option>
+            <option value="500">500</option>
+            <option value="800">800</option>
+            <option value="1000">1000</option>
+        </select>
+        <label for="maxprice">Max price:</label>
+        <select id="maxprice">
+            <option value="all">All</option>
+            <option value="4000">4000</option>
+            <option value="6000">6000</option>
+            <option value="8000">8000</option>
+            <option value="10000">10000</option>
+            <option value="12000">12000</option>
+            <option value="15000">15000</option>
+            <option value="20000">20000</option>
+        </select>
+        <label for="minprice">Min price:</label>
+        <select id="minprice">
+            <option value="all">All</option>
+            <option value="4000">4000</option>
+            <option value="6000">6000</option>
+            <option value="8000">8000</option>
+            <option value="10000">10000</option>
+            <option value="12000">12000</option>
+            <option value="15000">15000</option>
+            <option value="20000">20000</option>
+        </select>
+        <label for="bike-model">Model</label>
+        <select id="bike-model">
+            <option value="all">All</option>
+            <option value="EXC">EXC</option>
+            <option value="SX">SX</option>
+            <option value="Enduro">Enduro</option>
+            <option value="Adventure">Adventure</option>
+            <option value="RC">RC</option>
+        </select>        
+    </div>
+    <div id="bikesContainer">
+        
+    </div>
 </body>
 </html>
