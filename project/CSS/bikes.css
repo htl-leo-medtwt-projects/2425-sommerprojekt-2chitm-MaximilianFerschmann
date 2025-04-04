@@ -1,15 +1,23 @@
+:root {
+    --scharz: #151008;  /* Schwarzbraun */
+    --weiß: #fdf8ef;  /* Cremeweiß */
+    --hellorange: #e69900;  /* Leuchtendes Orange */
+    --grau: #4a4a4a;  /* Dunkelgrau */
+    --gold: #ffc55c;  /* Helles Goldgelb */
+    --orange: #f15a24;  /* Knalliges Orange */
+}
 /* Allgemeine Stile */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-    color: #333;
+    color: var(--grau);
 }
 
 a {
     text-decoration: none;
-    color: #ff6600;
+    color: var(--orange);
     font-weight: bold;
 }
 
@@ -19,7 +27,7 @@ a:hover {
 
 /* Filterbereich */
 #filter {
-    background: #fff;
+    background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -41,9 +49,14 @@ input, select {
 }
 
 #search{
-    width: 8vw;
-    height: 4vh;
-    margin: 3em;
+    margin: 4vh 45vw;
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* Bike-Container */
@@ -57,7 +70,7 @@ input, select {
 
 .bike-item {
     width: 26%;
-    background: #fff;
+    background: white;;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -72,5 +85,155 @@ input, select {
 
 .bike-item h3 {
     margin: 10px 0;
-    color: #ff6600;
+    color: var(--hellorange);
+}
+.bike-item button {
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.bike-item button:hover {
+    background: #e65c00;
+}
+#bikeDetails{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    height: 70vh;
+    width: 70vw;
+    padding: 3vh 3vw;
+}
+.hidden {
+    display: none;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bikeDetails img {
+    width: 100%;
+}
+#bikeDetails button {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    background: transparent;
+    font-size: 2em;
+    transition: all 0.3s ease;
+}
+#bikeDetails button:hover {
+    color: var(--orange);
+}
+#bikeDetails h2 {
+    color: var(--orange);
+    font-size: 3em;
+}
+#bikeDetails div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2vh 0;
+    flex-direction: column;
+    width: 50%;
+}
+#bikeDetails div p {
+    font-size: 1.5em;
+    color: var(--grau);
+    font-weight: bolder;
+}
+.backgroundKTM{
+    position: absolute;
+    z-index: -1;
+    font-family: 'Righteos', sans-serif;
+    font-weight: 1000;
+
+}
+.backgroundKTM:nth-child(2) {
+    top: 5vh;
+    left: 5vw;
+    font-size: 7em;
+    color: transparent; /* Innen transparent machen */
+    -webkit-text-stroke: 3px var(--scharz);
+}
+
+.backgroundKTM:nth-child(3) {
+    top: 15vh;
+    left: 85vw;
+    font-size: 6em;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--weiß);
+}
+.backgroundKTM:nth-child(4) {
+    top: 100vh;
+    left: 0vw;
+    font-size: 7em;
+    color: var(--weiß);
+}
+.backgroundKTM:nth-child(5) {
+    top: 100vh;
+    left: 80vw;
+    font-size: 7em;
+    color: var(--scharz);
+}
+.backgroundKTM:nth-child(6) {
+    top: 120vh;
+    left: 0vw;
+    font-size: 8em;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--scharz);
+}
+.backgroundKTM:nth-child(7) {
+    top: 120vh;
+    left: 80vw;
+    font-size: 8em;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--weiß);
+}
+.backgroundKTM:nth-child(8) {
+    top: 140vh;
+    left: 0vw;
+    font-size: 9em;
+    color: var(--scharz);
+}
+.backgroundKTM:nth-child(9) {
+    top: 140vh;
+    left: 80vw;
+    font-size: 9em;
+    color: var(--weiß);
+}
+.backgroundKTM:nth-child(10) {
+    top: 200vh;
+    left: -13vw;
+    font-size: 15em;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--weiß);
+    transform: rotate(-90deg);
+}
+.backgroundKTM:nth-child(11) {
+    top: 200vh;
+    left: 72vw;
+    font-size: 15em;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--weiß);
+    transform: rotate(90deg);
+}
+.backgroundKTM:nth-child(12) {
+    top: 0vh;
+    left: 0vw;
+    font-size: 13em;
+    color: transparent;
+    -webkit-text-stroke: 10px var(--scharz);
 }
