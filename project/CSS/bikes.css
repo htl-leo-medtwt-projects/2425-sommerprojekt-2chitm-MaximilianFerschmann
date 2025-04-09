@@ -231,9 +231,9 @@ input, select {
     transform: rotate(90deg);
 }
 .backgroundKTM:nth-child(12) {
-    top: 0vh;
+    top: 5vh;
     left: 0vw;
-    font-size: 13em;
+    font-size: 10em;
     color: transparent;
     -webkit-text-stroke: 10px var(--scharz);
 }

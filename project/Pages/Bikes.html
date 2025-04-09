@@ -19,8 +19,8 @@
         <label for="strokes">Strokes:</label>
         <select id="strokes">
             <option value="all">All</option>
-            <option value="2">2 Stroke</option>
-            <option value="4">4 Stroke</option>
+            <option value="2-Stroke">2 Stroke</option>
+            <option value="4-Stroke">4 Stroke</option>
         </select>
         </div>
         <div>
@@ -86,14 +86,11 @@
         </select>  
         </div>      
     </div>
-    <button id="search">Suchen</button>
+    <button id="search" onclick="loadFilteredBikes()">Suchen</button>
     <div id="bikesContainer">
     </div>
     <div id="bikeDetails" class="hidden">
     </div>
-    <div class="backgroundKTM">KTM</div>
-    <div class="backgroundKTM">KTM</div>
-    <div class="backgroundKTM">KTM</div>
     <div class="backgroundKTM">KTM</div>
     <div class="backgroundKTM">KTM</div>
     <div class="backgroundKTM">KTM</div>
