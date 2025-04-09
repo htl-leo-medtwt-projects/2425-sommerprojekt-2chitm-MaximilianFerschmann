@@ -9,10 +9,27 @@
 /* Allgemeine Stile */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--weiß);
+    background-image: none; /* Entferne das Hintergrundbild vom Body */
     margin: 0;
     padding: 20px;
     color: var(--grau);
+    position: relative; /* Wichtig für das Pseudo-Element */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./../Images/Bikesbg.png'); /* Hintergrundbild */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Hinter den Body-Inhalt legen */
+    filter: blur(5px); /* Unscharf machen */
+    transform: scale(1.1); /* Optional: Leicht vergrößern, um Ränder zu vermeiden */
 }
 
 a {
@@ -32,7 +49,7 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     gap: 2vw;
@@ -40,16 +57,18 @@ a:hover {
 
 #filter label {
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 input, select {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1.2em;
 }
 
 #search{
-    margin: 4vh 45vw;
+    margin: 1px 45vw;
     background: #ff6600;
     color: #fff;
     border: none;
@@ -73,7 +92,7 @@ input, select {
     background: white;;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
     text-align: center;
     margin-bottom: 3vh;
 }
@@ -121,8 +140,8 @@ input, select {
     justify-content: center;
     align-items: center;
 }
-#bikeDetails img {
-    width: 100%;
+.engineIMG{
+    width: 30%;
 }
 #bikeDetails button {
     border: none;
@@ -147,93 +166,16 @@ input, select {
     align-items: center;
     margin: 2vh 0;
     flex-direction: column;
-    width: 50%;
+}
+#bikeDetails div:nth-child(even){
+    width: 25%;
 }
 #bikeDetails div p {
-    font-size: 1.5em;
-    color: var(--grau);
+    font-size: 1.8em;
+    color: var(--orange);
     font-weight: bolder;
 }
-.backgroundKTM{
-    position: absolute;
-    z-index: -1;
-    font-family: 'Righteos', sans-serif;
-    font-weight: 1000;
-
-}
-.backgroundKTM:nth-child(2) {
-    top: 5vh;
-    left: 5vw;
-    font-size: 7em;
-    color: transparent; /* Innen transparent machen */
-    -webkit-text-stroke: 3px var(--scharz);
+#bikeDetails div h3{
+    font-size: 2em;
 }
 
-.backgroundKTM:nth-child(3) {
-    top: 15vh;
-    left: 85vw;
-    font-size: 6em;
-    color: transparent;
-    -webkit-text-stroke: 3px var(--weiß);
-}
-.backgroundKTM:nth-child(4) {
-    top: 100vh;
-    left: 0vw;
-    font-size: 7em;
-    color: var(--weiß);
-}
-.backgroundKTM:nth-child(5) {
-    top: 100vh;
-    left: 80vw;
-    font-size: 7em;
-    color: var(--scharz);
-}
-.backgroundKTM:nth-child(6) {
-    top: 120vh;
-    left: 0vw;
-    font-size: 8em;
-    color: transparent;
-    -webkit-text-stroke: 3px var(--scharz);
-}
-.backgroundKTM:nth-child(7) {
-    top: 120vh;
-    left: 80vw;
-    font-size: 8em;
-    color: transparent;
-    -webkit-text-stroke: 3px var(--weiß);
-}
-.backgroundKTM:nth-child(8) {
-    top: 140vh;
-    left: 0vw;
-    font-size: 9em;
-    color: var(--scharz);
-}
-.backgroundKTM:nth-child(9) {
-    top: 140vh;
-    left: 80vw;
-    font-size: 9em;
-    color: var(--weiß);
-}
-.backgroundKTM:nth-child(10) {
-    top: 200vh;
-    left: -13vw;
-    font-size: 15em;
-    color: transparent;
-    -webkit-text-stroke: 3px var(--weiß);
-    transform: rotate(-90deg);
-}
-.backgroundKTM:nth-child(11) {
-    top: 200vh;
-    left: 72vw;
-    font-size: 15em;
-    color: transparent;
-    -webkit-text-stroke: 3px var(--weiß);
-    transform: rotate(90deg);
-}
-.backgroundKTM:nth-child(12) {
-    top: 5vh;
-    left: 0vw;
-    font-size: 10em;
-    color: transparent;
-    -webkit-text-stroke: 10px var(--scharz);
-}

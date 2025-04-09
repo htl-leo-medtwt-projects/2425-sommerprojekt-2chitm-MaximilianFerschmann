@@ -39,7 +39,6 @@
         <label for="minccm">Min cm³:</label>
         <select id="minccm">
             <option value="all">All</option>
-            <option value="125">125</option>
             <option value="250">250</option>
             <option value="300">300</option>
             <option value="450">450</option>
@@ -52,7 +51,6 @@
         <label for="maxprice">Max price:</label>
         <select id="maxprice">
             <option value="all">All</option>
-            <option value="4000">4000</option>
             <option value="6000">6000</option>
             <option value="8000">8000</option>
             <option value="10000">10000</option>
@@ -65,7 +63,6 @@
         <label for="minprice">Min price:</label>
         <select id="minprice">
             <option value="all">All</option>
-            <option value="4000">4000</option>
             <option value="6000">6000</option>
             <option value="8000">8000</option>
             <option value="10000">10000</option>
@@ -84,19 +81,12 @@
             <option value="Adventure">Adventure</option>
             <option value="RC">RC</option>
         </select>  
-        </div>      
+        </div>    
+        <button id="search" onclick="loadFilteredBikes()">Suchen</button>  
     </div>
-    <button id="search" onclick="loadFilteredBikes()">Suchen</button>
+    
     <div id="bikesContainer">
     </div>
-    <div id="bikeDetails" class="hidden">
-    </div>
-    <div class="backgroundKTM">KTM</div>
-    <div class="backgroundKTM">KTM</div>
-    <div class="backgroundKTM">KTM</div>
-    <div class="backgroundKTM">KTM</div>
-    <div class="backgroundKTM">KTM</div>
-    <div class="backgroundKTM">KTM</div>
-    <div class="backgroundKTM">KTM</div>
+    <div id="bikeDetails" class="hidden"></div>
 </body>
 </html>
