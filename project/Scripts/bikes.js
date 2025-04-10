@@ -1,4 +1,4 @@
-
+AOS.init();
 const bikesContainer = document.getElementById('bikesContainer');
 
 let bikes = [];
@@ -101,4 +101,3 @@ function loadBikes(bikes){
 
   });
 }
-AOS.init();

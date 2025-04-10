@@ -71,14 +71,6 @@ p{
     font-weight: 1000;
 
 }
-.backgroundKTM:nth-child(2) {
-    top: 5vh;
-    left: 5vw;
-    font-size: 7em;
-    color: transparent; /* Innen transparent machen */
-    -webkit-text-stroke: 3px var(--scharz);
-}
-
 .backgroundKTM:nth-child(3) {
     top: 15vh;
     left: 85vw;

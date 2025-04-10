@@ -1,5 +1,5 @@
 document.body.innerHTML += `
-    ${'<div class="backgroundKTM">KTM</div>'.repeat(11)}
+    ${'<div class="backgroundKTM">KTM</div>'.repeat(10)}
 `
 const homeSlidersrc = ["300EXC.png", "125SX.png", "450EXC-F.png", "350EXC-F.png"];
 let currenthomeindex = 0;
