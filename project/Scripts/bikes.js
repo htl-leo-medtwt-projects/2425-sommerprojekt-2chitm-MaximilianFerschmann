@@ -1,5 +1,5 @@
-const bikesContainer = document.getElementById('bikesContainer');
 
+const bikesContainer = document.getElementById('bikesContainer');
 
 let bikes = [];
 fetch('../Data/bikes.json')
@@ -92,7 +92,7 @@ function loadBikes(bikes){
   console.log(bikes)
   bikes.forEach(bike => {
     bikesContainer.innerHTML += `
-                <div class="bike-item">
+                <div class="bike-item" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <img src="../${bike.image}" alt="${bike.model}">
                     <h3>${bike.model}</h3>
                     <button onclick="loadBikeDetails('${bike.model}')"> Show Details </button>
@@ -101,3 +101,4 @@ function loadBikes(bikes){
 
   });
 }
+AOS.init();

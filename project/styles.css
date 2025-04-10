@@ -200,9 +200,30 @@ p{
 #rightInfo{
     align-items: end;
 }
-#home-slider-image{
-    width: 22vw;
+#home-slider {
+    position: relative;
+    width: 35%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Slider-Bild */
+#home-slider img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    transform: scale(1.4); /* Startet mit leichter Vergrößerung */
+}
+#home-slider img.active {
+    opacity: 1;
+    transform: scale(1.2); /* Zoomt auf normale Größe zurück */
+}
+
 #helmet-slider-image{
     width: 7vw;
     position: relative;

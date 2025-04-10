@@ -53,18 +53,17 @@ a:hover {
     align-items: center;
     flex-wrap: wrap;
     gap: 2vw;
+    margin-top: 5vh;
 }
 
 #filter label {
     font-weight: bold;
-    font-size: 1.2em;
 }
 
 input, select {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1.2em;
 }
 
 #search{
@@ -155,6 +154,10 @@ input, select {
 }
 #bikeDetails button:hover {
     color: var(--orange);
+    transform: rotate(-10deg);
+}
+#bikeDetails button:active {
+    transform: scale(0.7);
 }
 #bikeDetails h2 {
     color: var(--orange);
@@ -164,18 +167,41 @@ input, select {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 2vh 0;
     flex-direction: column;
 }
 #bikeDetails div:nth-child(even){
-    width: 25%;
+    width: 30%;
 }
 #bikeDetails div p {
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: var(--orange);
     font-weight: bolder;
 }
 #bikeDetails div h3{
     font-size: 2em;
 }
+#bikeImage{
+    width: 80%;
+}
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: var(--orange); /* schönes Blau */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: sticky;
+    top: 2px;
+  }
+  
+  .back-button:hover {
+    background-color: rgb(255, 145, 0); /* dunkleres Blau beim Hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
 
