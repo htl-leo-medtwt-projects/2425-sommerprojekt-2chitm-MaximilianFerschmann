@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Oneal 3 Series",
+        "brand": "Oneal",
+        "price": 199.99,
+        "image": "Images/Helmets/oneal_3_series.png",
+        "description": "The Oneal 3 Series helmet is designed for maximum comfort and safety. It features a lightweight shell, advanced ventilation system, and a removable liner for easy cleaning. Perfect for off-road adventures."
+    },
+    {
+        "id": 2,
+        "name": "Bell Moto-9S",
+        "brand": "Bell",
+        "price": 399.99,
+        "image": "Images/Helmets/bell_moto_9s.png",
+        "description": "The Bell Moto-9S is a high-performance helmet designed for motocross riders. It features a lightweight carbon composite shell, advanced impact protection, and a moisture-wicking liner for comfort."
+    },
+    {
+        "id": 3,
+        "name": "Fox V1",
+        "brand": "Fox Racing",
+        "price": 149.99,
+        "image": "Images/Helmets/fox_v1.png",
+        "description": "The Fox V1 helmet is a great entry-level option for motocross enthusiasts. It offers a durable shell, comfortable fit, and excellent ventilation to keep you cool during rides."
+    },
+    {
+        "id": 4,
+        "name": "AGV Pista GP RR",
+        "brand": "AGV",
+        "price": 1299.99,
+        "image": "Images/Helmets/agv_pista_gp_rr.png",
+        "description": "The AGV Pista GP RR is a top-of-the-line racing helmet designed for professional riders. It features a lightweight carbon fiber shell, advanced aerodynamics, and superior ventilation for maximum performance."
+    },
+    {
+        "id": 5,
+        "name": "Shoei X-Fourteen",
+        "brand": "Shoei",
+        "price": 799.99,
+        "image": "Images/Helmets/shoei_x_fourteen.png",
+        "description": "The Shoei X-Fourteen is a premium full-face helmet designed for sportbike riders. It offers exceptional aerodynamics, advanced impact protection, and a comfortable fit for long rides."
+    }
+]

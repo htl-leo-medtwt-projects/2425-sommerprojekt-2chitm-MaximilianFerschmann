@@ -27,5 +27,12 @@ function homeSlider(value) {
 }
 
 // Automatischer Slider (optional)
+homeSlider(0); // Initiales Bild setzen
 let autoSlideInterval = setInterval(() => homeSlider(1), 5000); // Wechselt alle 5 Sekunden
+
+
+
+
+let currentHelmetIndex = 0;
+const helmetSlidersrc = ["Airoh.png", "Bell.png", "HJC.png", "Shoei.png"];
     

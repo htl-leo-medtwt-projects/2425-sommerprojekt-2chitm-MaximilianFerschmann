@@ -1,4 +1,4 @@
-AOS.init();
+
 const bikesContainer = document.getElementById('bikesContainer');
 
 let bikes = [];
@@ -26,7 +26,7 @@ function loadBikeDetails(bikename) {
         <h3>MOTOR</h3>
         <img class="engineIMG" src="../Images/Engine/Gears.png"> 
         <p id="bikeStrokes">${bike.stroke}</p>
-        <p id="bikeCcm">Hubraum: ${bike.cc}cm³</p>
+        <p id="bikeCcm">CC: ${bike.cc}cm³</p>
         <h3>POWER</h3>
         <img class="engineIMG" src="../Images/Engine/Tacho.png">
         <p id="bikePower">PS: ${bike.hp}</p>  
@@ -37,8 +37,9 @@ function loadBikeDetails(bikename) {
         </div>
         <div>
         <h3>DETAILS</h3>
-        <p id="bikePrice">Preis: ${bike.price}€</p>
         <img class="engineIMG" src="../Images/Engine/Weight.png">
+        <p id="bikePrice">Preis: ${bike.price}€</p>
+
         <p id="bikeWeight">Gewicht: ${bike.weight}kg</p>
         </div>
         
@@ -100,4 +101,8 @@ function loadBikes(bikes){
             `;
 
   });
+ // Re-initialize AOS after loading new content
 }
+setTimeout(() => {
+  AOS.init();
+}, 100);
