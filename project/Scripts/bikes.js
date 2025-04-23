@@ -22,14 +22,17 @@ function loadBikeDetails(bikename) {
     document.getElementById('filter').style.opacity = '0.2';
     detailContainer.innerHTML = `
         <button id="closeDetails" onclick="closeDetails()">X</button>
-        <div>
+        <div><div>
         <h3>MOTOR</h3>
         <img class="engineIMG" src="../Images/Engine/Gears.png"> 
         <p id="bikeStrokes">${bike.stroke}</p>
         <p id="bikeCcm">CC: ${bike.cc}cm³</p>
+        </div>
+        <div>
         <h3>POWER</h3>
         <img class="engineIMG" src="../Images/Engine/Tacho.png">
         <p id="bikePower">PS: ${bike.hp}</p>  
+        </div>
         </div>
         <div>
         <h2 id="bikeName">${bike.model}</h2>

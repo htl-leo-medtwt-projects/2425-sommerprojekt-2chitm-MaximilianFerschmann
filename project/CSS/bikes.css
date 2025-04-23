@@ -205,3 +205,137 @@ input, select {
   }
   
 
+  /* Responsive Styles  große Teile AI*/
+
+/* Für Tablets (z. B. iPad) */
+@media (max-width: 1024px) {
+    /* Filterbereich */
+    #filter {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Bike-Container */
+    .bike-item {
+        width: 45%; /* Weniger Elemente pro Zeile */
+    }
+
+    /* Detailansicht */
+    #bikeDetails {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    /* Buttons */
+    .back-button {
+        font-size: 0.9em;
+        padding: 8px 14px;
+    }
+}
+
+/* Für kleinere Tablets und große Smartphones (z. B. iPhone Pro Max) */
+@media (max-width: 768px) {
+    /* Filterbereich */
+    #filter {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Bike-Container */
+    .bike-item {
+        width: 100%; /* Nur ein Element pro Zeile */
+    }
+
+    /* Detailansicht */
+    #bikeDetails {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh; /* Stapele die Inhalte vertikal */
+    }
+
+    /* Detailansicht - Inhalt */
+    #bikeDetails div:nth-child(even) {
+        width: 100%;
+        flex-direction: row; /* Stapele die Inhalte vertikal */
+        justify-content: center;
+        gap: 0;
+    }
+    #bikeDetails div:nth-child(even) img {
+        width: 20%;
+    }
+    #bikeDetails div:nth-child(even) div {
+        flex-direction: column;
+        width: 50%;
+    }
+    #bikeDetails div:nth-child(4) img {
+        width: 10%;
+    }
+    #bikeDetails div:nth-child(4) {
+        flex-direction: column;
+        width: 50%;
+    }
+    
+
+    /* Bilder in der Detailansicht */
+    #bikeImage {
+        width: 50%;
+    }
+
+    /* Buttons */
+    .back-button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
+
+/* Für Smartphones (kleine Bildschirme) */
+@media (max-width: 480px) {
+    /* Padding für den Body reduzieren */
+    body {
+        padding: 10px;
+    }
+
+    /* Filterbereich */
+    #filter {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    /* Suchbutton */
+    #search {
+        margin: 10px 0;
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    /* Bike-Container */
+    .bike-item {
+        padding: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Bike-Titel */
+    .bike-item h3 {
+        font-size: 1.2em;
+    }
+
+    /* Detailansicht */
+    #bikeDetails {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    /* Detailansicht - Text */
+    #bikeDetails div p {
+        font-size: 1.2em;
+    }
+
+    /* Close-Button */
+    #bikeDetails button {
+        font-size: 1.5em;
+    }
+}

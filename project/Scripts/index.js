@@ -34,5 +34,30 @@ let autoSlideInterval = setInterval(() => homeSlider(1), 5000); // Wechselt alle
 
 
 let currentHelmetIndex = 0;
-const helmetSlidersrc = ["Airoh.png", "Bell.png", "HJC.png", "Shoei.png"];
-    
+let helmets = [];
+
+fetch('./Data/Helmets.json')
+  .then(response => response.json())
+  .then(data => {
+    helmets = data;
+    console.log(helmets);
+  })
+  .catch(error => console.error('Fehler:', error));
+
+
+function helmetSlider(value) {
+    value = parseInt(value)
+    console.log(value);
+    const helmetImage = document.getElementById("helmet-slider-image");
+    helmetImage.classList.remove("active");
+    currentHelmetIndex += value;
+    if (currentHelmetIndex < 0) {
+        currentHelmetIndex = helmets.length - 1;
+    } else if (currentHelmetIndex >= helmets.length) {
+        currentHelmetIndex = 0;
+    }
+    setTimeout(() => {
+        helmetImage.src = helmets[currentHelmetIndex].image;
+        helmetImage.classList.add("active");
+    }, 100);
+}
