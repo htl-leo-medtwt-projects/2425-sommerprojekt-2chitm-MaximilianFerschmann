@@ -370,6 +370,7 @@ p{
     justify-content: end;
     width: 15%;
     gap: 0;
+    transition: all 0.5s;
 }
 #helmet-slider-bottom img{
     height: 20vh;
@@ -390,6 +391,9 @@ footer section{
     display: flex;
     justify-content: center;
     gap: 2vw;
+}
+#helmet-slider-bottom div div:hover{
+    transform: scale(1.3);
 }
 
 
