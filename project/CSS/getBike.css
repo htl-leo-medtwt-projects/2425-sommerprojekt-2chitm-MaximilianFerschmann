@@ -1,4 +1,12 @@
 /* Allgemeine Stile */
+:root {
+  --scharz: #151008;  /* Schwarzbraun */
+  --weiß: #fdf8ef;  /* Cremeweiß */
+  --hellorange: #e69900;  /* Leuchtendes Orange */
+  --grau: #4a4a4a;  /* Dunkelgrau */
+  --gold: #ffc55c;  /* Helles Goldgelb */
+  --orange: #f15a24;  /* Knalliges Orange */
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +15,7 @@
   }
   
   body {
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    background: linear-gradient(-280deg, rgba(242,119,26,1) 23%, rgba(210,210,210,1) 100%);
     color: #fff;
     display: flex;
     justify-content: center;
@@ -19,6 +27,7 @@
   .container {
     width: 90%;
     max-width: 1200px;
+    min-height: 50vh;
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
@@ -55,7 +64,8 @@
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
+    margin: 3vh 0;
   }
   
   .back-button:hover {
@@ -69,13 +79,15 @@
     align-items: center;
     width: 100%;
     gap: 20px;
+    position: relative;
   }
   
   .left-section {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    display: none;
     align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
   }
   
   .engine-info {
@@ -89,21 +101,21 @@
   }
   
   .engine-info .label {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #f39c12;
     margin-bottom: 5px;
   }
   
   .engine-info .description {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 400;
     color: #fff;
+    line-height: 170%;
   }
   
   #image {
-    width: 100%;
-    max-width: 300px;
+    width: 50%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -119,6 +131,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   
   #question {
@@ -130,7 +143,7 @@
   
   .question-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     gap: 15px;
     width: 100%;
   }
@@ -144,7 +157,8 @@
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+    width: 30%;
   }
   
   #answer1:hover,
@@ -181,10 +195,20 @@
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
   }
   
   #reset-button:hover {
     background: #2471a3;
     transform: scale(1.05);
+  }
+  #title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f39c12;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    text-align: center;
   }

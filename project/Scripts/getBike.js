@@ -21,7 +21,7 @@ const questions = [
     question: "Welche Leistungsklasse bevorzugen Sie?",
     answers: ["Klein (bis 250cc)", "Groß (über 250cc)"],
     filterKey: "cc",
-    filterValues: [250, Infinity]
+    filterValues: [250, 2000]
   },
   {
     question: "Welchen Fahrstil bevorzugen Sie?",
@@ -68,10 +68,15 @@ function handleAnswer(answerIndex) {
   if (Array.isArray(filterValue)) {
     filteredBikes = filteredBikes.filter(bike => filterValue.includes(bike[currentQuestion.filterKey]));
   } else if (typeof filterValue === "number") {
-    filteredBikes = filteredBikes.filter(bike => (answerIndex === 0 ? bike[currentQuestion.filterKey] <= filterValue : bike[currentQuestion.filterKey] > filterValue));
+    if(answerIndex === 0) {
+      filteredBikes = filteredBikes.filter(bike => bike.cc <= 250);
+    } else {
+      filteredBikes = filteredBikes.filter(bike => bike.cc > 250);
+    }
   } else {
     filteredBikes = filteredBikes.filter(bike => bike[currentQuestion.filterKey] === filterValue);
   }
+  console.log(filteredBikes); // Debugging-Ausgabe
 
   currentQuestionIndex++;
   loadQuestion();
@@ -84,10 +89,13 @@ function showResult() {
     imageContainer.src = "";
     descriptionContainer.textContent = "";
     return;
+  } else {
+    document.querySelector(".right-section").style.display = "none";
+    document.querySelector(".left-section").style.display = "flex"; 
   }
 
   const selectedBike = filteredBikes[0];
-  questionContainer.textContent = `Ihr perfektes Motorrad: ${selectedBike.model}`;
+  document.querySelector('#title').textContent = `${selectedBike.model}`;
   imageContainer.src = '../' + selectedBike.image;
   descriptionContainer.textContent = `Typ: ${selectedBike.type}, Hubraum: ${selectedBike.cc}cc, Leistung: ${selectedBike.hp} PS, Gewicht: ${selectedBike.weight} kg, Preis: ${selectedBike.price} €`;
 }
@@ -100,7 +108,10 @@ function resetQuiz() {
   imageContainer.src = ""; // Bild zurücksetzen
   descriptionContainer.textContent = ""; // Beschreibung zurücksetzen
   answerContainer1.style.display = "flex"; // Antwort-Container wieder anzeigen
-    answerContainer2.style.display = "flex"; // Antwort-Container wieder anzeigen
+  answerContainer2.style.display = "flex"; // Antwort-Container wieder anzeigen
+  document.querySelector(".right-section").style.display = "flex";
+  document.querySelector(".left-section").style.display = "none"; 
+  document.querySelector('#title').textContent = ""; // Titel zurücksetzen
 }
 
 // Event-Listener für den Reset-Button

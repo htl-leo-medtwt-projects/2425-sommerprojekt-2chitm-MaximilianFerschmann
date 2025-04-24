@@ -28,9 +28,9 @@ function loadBikeDetails(bikename) {
         <p id="bikeStrokes">${bike.stroke}</p>
         <p id="bikeCcm">CC: ${bike.cc}cm³</p>
         </div>
-        <div>
+        <div style="width: 100%;">
         <h3>POWER</h3>
-        <img class="engineIMG" src="../Images/Engine/Tacho.png">
+        <img class="engineIMG"  src="../Images/Engine/Tacho.png">
         <p id="bikePower">PS: ${bike.hp}</p>  
         </div>
         </div>
@@ -44,8 +44,7 @@ function loadBikeDetails(bikename) {
         <p id="bikePrice">Preis: ${bike.price}€</p>
 
         <p id="bikeWeight">Gewicht: ${bike.weight}kg</p>
-        </div>
-        
+        </div>        
 
     `
 
@@ -108,4 +107,4 @@ function loadBikes(bikes){
 }
 setTimeout(() => {
   AOS.init();
-}, 100);
+}, 300);
