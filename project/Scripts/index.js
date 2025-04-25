@@ -61,3 +61,34 @@ function helmetSlider(value) {
         helmetImage.classList.add("active");
     }, 100);
 }
+function renderHelmets(data) {
+    data = data.slice(0, 5);
+    const container = document.getElementById('helmets-container');
+
+    data.forEach(helmet => {
+        // Erstelle ein neues div-Element für jeden Helm
+        const helmetDiv = document.createElement('div');
+
+        // Erstelle das img-Element
+        const img = document.createElement('img');
+        img.src = helmet.image;
+        img.alt = helmet.name;
+
+        // Erstelle das vertikale Linien-Element
+        const verticalLine = document.createElement('section');
+        verticalLine.className = 'vertikal-line';
+        const h3 = document.createElement('h3');
+        h3.textContent = helmet.name;
+
+        // Füge alle Elemente zum helmetDiv hinzu
+        helmetDiv.appendChild(img);
+        helmetDiv.appendChild(verticalLine);
+        helmetDiv.appendChild(h3);
+
+        // Füge das helmetDiv zum Container hinzu
+        container.appendChild(helmetDiv);
+    })
+}
+setTimeout(() => {
+    renderHelmets(helmets);
+}, 100); // Warte 0.1 Sekunde, um sicherzustellen, dass die Daten geladen sind
