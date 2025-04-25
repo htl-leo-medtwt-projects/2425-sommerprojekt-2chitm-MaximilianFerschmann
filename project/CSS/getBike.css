@@ -1,4 +1,15 @@
-/* Allgemeine Stile */
+@font-face {
+  font-family: 'Spaceport';
+  src: url('Fonts/Spaceport1.ttf');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('Fonts/Roboto-VariableFont_wdth\,wght.ttf');
+}
+@font-face {
+  font-family: 'Righteous';
+  src: url('Fonts/Righteous-Regular.ttf');
+}
 :root {
   --scharz: #151008;  /* Schwarzbraun */
   --weiß: #fdf8ef;  /* Cremeweiß */
@@ -212,3 +223,46 @@
     width: 100%;
     text-align: center;
   }
+.backgroundKTM{
+  position: absolute;
+  z-index: -1;
+  font-family: 'Righteos', sans-serif;
+  font-weight: 1000;
+  opacity: 0.5;
+}
+.backgroundKTM:nth-child(2){
+  top: 2vw;
+  left: 5vh;
+  font-size: 8em;
+  z-index: -1;
+  color: transparent;
+  -webkit-text-stroke: 5px var(--weiß);
+}
+.backgroundKTM:nth-child(3){
+  top: 60vh;
+  left: 20vw;
+  font-size: 10em;
+  z-index: -1;
+  color: var(--weiß);
+}
+.backgroundKTM:nth-child(4){
+  top: 20vh;
+  left: 70vw;
+  font-size: 12em;
+  color: var(--scharz);
+}
+.backgroundKTM:nth-child(5){
+  top: 80vh;
+  left: 85vw;
+  font-size: 7em;
+  color: transparent;
+  -webkit-text-stroke: 5px var(--weiß);
+} 
+.backgroundKTM:nth-child(6){
+  top: 0vh;
+  left: 40vw;
+  font-size: 6em;
+  z-index: -1;
+  color: transparent;
+  -webkit-text-stroke: 5px var(--scharz);	
+}
