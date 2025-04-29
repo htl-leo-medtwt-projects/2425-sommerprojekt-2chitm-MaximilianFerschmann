@@ -24,8 +24,9 @@ function showMessage(text, success = false) {
   messageDiv.textContent = text;
   messageDiv.style.color = success ? "#d4f4dd" : "#ffeb3b";
 }
-function saveUser(username, password, favbikes) { password = hashString(password)
-   hashString(password).then(localStorage.setItem("user_" + username, JSON.stringify({ username, password,favbikes})))
+async function saveUser(username, password, favbikes) {
+  const hashedPassword = await hashString(password); // Passwort hashen
+  localStorage.setItem("user_" + username, JSON.stringify({ username, password: hashedPassword, favbikes }));
 }
 
 function getUser(username) {
@@ -46,9 +47,10 @@ function handleRegister() {
     return;
   }
 
-  saveUser(username, password, []);
-  showMessage("Registrierung erfolgreich!", true);
-  form.reset();
+  saveUser(username, password, []).then(() => {
+    showMessage("Registrierung erfolgreich!", true);
+    form.reset();
+  });
 }
 
 function handleLogin() {
