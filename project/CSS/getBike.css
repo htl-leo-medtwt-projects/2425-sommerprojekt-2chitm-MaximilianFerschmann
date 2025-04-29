@@ -18,6 +18,28 @@
   --gold: #ffc55c;  /* Helles Goldgelb */
   --orange: #f15a24;  /* Knalliges Orange */
 }
+/* Globale Schriftart-Einstellung */
+* {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* Überschreiben spezifischer Klassen und IDs */
+header h1,
+#question,
+#answer1,
+#answer2,
+.social-icon,
+#reset-button,
+.engine-info .label,
+.engine-info .description,
+.back-button {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* Optional: Für bestimmte Elemente eine alternative Schriftart verwenden */
+header h1 span {
+  font-family: 'Righteous', cursive !important; /* Knalliger Effekt für den Highlight-Text */
+}
 * {
     margin: 0;
     padding: 0;
