@@ -92,3 +92,30 @@ function renderHelmets(data) {
 setTimeout(() => {
     renderHelmets(helmets);
 }, 100); // Warte 0.1 Sekunde, um sicherzustellen, dass die Daten geladen sind
+
+
+function showLogIn() {
+
+    const loginContainer = document.getElementById('login_container');
+    if(loginContainer.style.display === 'flex') {
+        loginContainer.style.display = 'none';
+        return
+    }
+    console.log('showLogIn function called');
+    if(localStorage.getItem('loggedInUser')) {
+        loginContainer.innerHTML = `
+        <button id="Logout" onclick="logOut()">Log Out</button>
+        `
+        loginContainer.style.display = 'flex';
+    } else {
+        loginContainer.innerHTML = `
+        <a href="./Pages/Log_in.html">Log In</a>
+        ` 
+        loginContainer.style.display = 'flex';
+    }
+}
+function logOut() {
+    localStorage.removeItem('loggedInUser');
+    const loginContainer = document.getElementById('login_container');
+    loginContainer.style.display = 'none';
+}

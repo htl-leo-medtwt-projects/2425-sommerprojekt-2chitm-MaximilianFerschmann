@@ -28,7 +28,12 @@ async function saveUser(username, password, favbikes) {
   const hashedPassword = await hashString(password); // Passwort hashen
   localStorage.setItem("user_" + username, JSON.stringify({ username, password: hashedPassword, favbikes }));
 }
-
+async function compareUser(username, password) {
+  const user = getUser(username);
+  if (!user) return false;
+  const hashedPassword = await hashString(password);
+  return user.password == hashedPassword;  
+}
 function getUser(username) {
   return JSON.parse(localStorage.getItem("user_" + username));
 }
@@ -55,7 +60,8 @@ function handleRegister() {
 
 function handleLogin() {
   const username = document.getElementById("username").value.trim();
-  const password = document.getElementById("password").value;
+  let password = document.getElementById("password").value;
+
 
   if (!username || !password) {
     showMessage("Bitte Benutzernamen und Passwort eingeben.");
@@ -64,7 +70,7 @@ function handleLogin() {
 
   const user = getUser(username);
 
-  if (!user || user.password !== password) {
+  if (compareUser(username, password) == false) {
     showMessage("Ungültige Anmeldedaten.");
     return;
   }

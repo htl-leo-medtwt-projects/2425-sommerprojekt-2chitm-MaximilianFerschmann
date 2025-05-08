@@ -1,5 +1,6 @@
 
 const bikesContainer = document.getElementById('bikesContainer');
+const favBikesContainer = document.getElementById('favBikesContainer');
 
 let bikes = [];
 fetch('../Data/bikes.json')
@@ -90,6 +91,60 @@ function loadFilteredBikes() {
   bikesContainer.innerHTML = ''; 
   loadBikes(filteredBikes);
 }
+function loadFavorites() {
+  let user = localStorage.getItem('loggedInUser');
+  if (!user) {
+    return;
+  }
+  let userData = JSON.parse(localStorage.getItem('user_' + user));
+  let favBikes = userData.favbikes || [];
+  favBikes.forEach(bikeName => {
+    let bike = bikes.find(bike => bike.model === bikeName);
+    if (bike) {
+      favBikesContainer.innerHTML += `
+                <div class="bike-item" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <img src="../${bike.image}" alt="${bike.model}">
+                    <h3>${bike.model}</h3>
+                    <button onclick="loadBikeDetails('${bike.model}')"> Show Details </button>
+                    <p id="setFav" onclick="removeFav('${bike.model}')">Remove from Favorites</p>
+                </div>
+            `;
+    }
+  })
+}
+function setFav(bikename) {
+  let user = localStorage.getItem('loggedInUser');
+  if (!user) {
+    alert('Bitte zuerst einloggen!');
+    return;
+  }
+  let userData = JSON.parse(localStorage.getItem('user_' + user));
+  let favBikes = userData.favbikes || [];
+  if (favBikes.includes(bikename)) {
+    alert('Dieses Bike ist bereits in deinen Favoriten!');
+    return;
+  } else {
+    favBikes.push(bikename);
+    userData.favbikes = favBikes;
+    localStorage.setItem('user_' + user, JSON.stringify(userData));
+  }
+  loadFavorites();
+}
+function removeFav(bikename) {
+  let user = localStorage.getItem('loggedInUser');
+  let userData = JSON.parse(localStorage.getItem('user_' + user));
+  let favBikes = userData.favbikes || [];
+  console.log(favBikes)
+  if (favBikes.includes(bikename)) {
+    favBikes = favBikes.filter(bike => bike != bikename);
+    userData.favbikes = favBikes;
+    localStorage.setItem('user_' + user, JSON.stringify(userData));
+  }
+  setTimeout(() => {
+    favBikesContainer.innerHTML = '';
+  }, 500); 
+  loadFavorites();
+}
 
 function loadBikes(bikes){
   console.log(bikes)
@@ -99,6 +154,7 @@ function loadBikes(bikes){
                     <img src="../${bike.image}" alt="${bike.model}">
                     <h3>${bike.model}</h3>
                     <button onclick="loadBikeDetails('${bike.model}')"> Show Details </button>
+                    <p id="setFav" onclick="setFav('${bike.model}')">Add to Favorites</p>
                 </div>
             `;
 
@@ -107,4 +163,5 @@ function loadBikes(bikes){
 }
 setTimeout(() => {
   AOS.init();
+  loadFavorites();
 }, 300);
