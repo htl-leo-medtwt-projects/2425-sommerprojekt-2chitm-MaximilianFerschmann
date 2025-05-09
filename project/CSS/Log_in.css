@@ -119,3 +119,9 @@
     color: #d32f2f;
     min-height: 1.5em;
   }
+  a{
+    color: #ffa726;
+    text-decoration: none;
+    font-size: 2em;
+    transition: color 0.3s ease;
+  }

@@ -98,15 +98,16 @@ function loadFavorites() {
   }
   let userData = JSON.parse(localStorage.getItem('user_' + user));
   let favBikes = userData.favbikes || [];
+  favBikesContainer.innerHTML = ''; // Clear the container before loading favorites
   favBikes.forEach(bikeName => {
     let bike = bikes.find(bike => bike.model === bikeName);
     if (bike) {
       favBikesContainer.innerHTML += `
-                <div class="bike-item" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                <div class="Favbike-item" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <img src="../${bike.image}" alt="${bike.model}">
                     <h3>${bike.model}</h3>
                     <button onclick="loadBikeDetails('${bike.model}')"> Show Details </button>
-                    <p id="setFav" onclick="removeFav('${bike.model}')">Remove from Favorites</p>
+                    <p id="setFav" onclick="removeFav('${bike.model}')"><img src="../Images/SternIcon_gefüllt.webp"></p>
                 </div>
             `;
     }
@@ -141,9 +142,9 @@ function removeFav(bikename) {
     localStorage.setItem('user_' + user, JSON.stringify(userData));
   }
   setTimeout(() => {
-    favBikesContainer.innerHTML = '';
+    loadFavorites();
   }, 500); 
-  loadFavorites();
+  
 }
 
 function loadBikes(bikes){
@@ -154,7 +155,7 @@ function loadBikes(bikes){
                     <img src="../${bike.image}" alt="${bike.model}">
                     <h3>${bike.model}</h3>
                     <button onclick="loadBikeDetails('${bike.model}')"> Show Details </button>
-                    <p id="setFav" onclick="setFav('${bike.model}')">Add to Favorites</p>
+                    <p id="setFav" onclick="setFav('${bike.model}')"><img src="../Images/SternIcon.png"></p>
                 </div>
             `;
 
