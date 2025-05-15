@@ -5,7 +5,8 @@
         "brand": "Oneal",
         "price": 199.99,
         "image": "Images/Helmets/oneal_3_series.png",
-        "description": "The Oneal 3 Series helmet is designed for maximum comfort and safety. It features a lightweight shell, advanced ventilation system, and a removable liner for easy cleaning. Perfect for off-road adventures."
+        "description": "The Oneal 3 Series helmet is designed for maximum comfort and safety. It features a lightweight shell, advanced ventilation system, and a removable liner for easy cleaning. Perfect for off-road adventures.",
+        "typ": "helmet"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "brand": "Bell",
         "price": 399.99,
         "image": "Images/Helmets/bell_moto_9s.png",
-        "description": "The Bell Moto-9S is a high-performance helmet designed for motocross riders. It features a lightweight carbon composite shell, advanced impact protection, and a moisture-wicking liner for comfort."
+        "description": "The Bell Moto-9S is a high-performance helmet designed for motocross riders. It features a lightweight carbon composite shell, advanced impact protection, and a moisture-wicking liner for comfort.",
+        "typ": "helmet"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "brand": "Fox Racing",
         "price": 149.99,
         "image": "Images/Helmets/fox_v1.png",
-        "description": "The Fox V1 helmet is a great entry-level option for motocross enthusiasts. It offers a durable shell, comfortable fit, and excellent ventilation to keep you cool during rides."
+        "description": "The Fox V1 helmet is a great entry-level option for motocross enthusiasts. It offers a durable shell, comfortable fit, and excellent ventilation to keep you cool during rides.",
+        "typ": "helmet"
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "brand": "AGV",
         "price": 1299.99,
         "image": "Images/Helmets/agv_pista_gp_rr.png",
-        "description": "The AGV Pista GP RR is a top-of-the-line racing helmet designed for professional riders. It features a lightweight carbon fiber shell, advanced aerodynamics, and superior ventilation for maximum performance."
+        "description": "The AGV Pista GP RR is a top-of-the-line racing helmet designed for professional riders. It features a lightweight carbon fiber shell, advanced aerodynamics, and superior ventilation for maximum performance.",
+        "typ": "helmet"
     },
     {
         "id": 5,
@@ -37,6 +41,43 @@
         "brand": "Shoei",
         "price": 799.99,
         "image": "Images/Helmets/shoei_x_fourteen.png",
-        "description": "The Shoei X-Fourteen is a premium full-face helmet designed for sportbike riders. It offers exceptional aerodynamics, advanced impact protection, and a comfortable fit for long rides."
+        "description": "The Shoei X-Fourteen is a premium full-face helmet designed for sportbike riders. It offers exceptional aerodynamics, advanced impact protection, and a comfortable fit for long rides.",
+        "typ": "helmet"
+    },
+    {
+        "id": 6,
+        "name": "Alpinestars SMX Gloves",
+        "brand": "Alpinestars",
+        "price": 89.99,
+        "image": "Images/Gloves/alpinestars_smx.png",
+        "description": "The Alpinestars SMX gloves offer excellent protection and comfort with reinforced knuckles, breathable materials, and a secure fit.",
+        "typ": "glove"
+    },
+    {
+        "id": 7,
+        "name": "Fox Dirtpaw Gloves",
+        "brand": "Fox Racing",
+        "price": 39.99,
+        "image": "Images/Gloves/fox_dirtpaw.png",
+        "description": "The Fox Dirtpaw gloves are perfect for motocross riders seeking grip and durability. Padded palms and stretch mesh construction provide a snug, flexible fit.",
+        "typ": "glove"
+    },
+    {
+        "id": 8,
+        "name": "Sidi Crossfire 3 Boots",
+        "brand": "Sidi",
+        "price": 499.99,
+        "image": "Images/Boots/sidi_crossfire_3.png",
+        "description": "The Sidi Crossfire 3 boots offer premium protection and support for off-road riders. Featuring adjustable buckles, impact zones, and a replaceable sole.",
+        "typ": "boot"
+    },
+    {
+        "id": 9,
+        "name": "Gaerne SG-12 Boots",
+        "brand": "Gaerne",
+        "price": 579.99,
+        "image": "Images/Boots/gaerne_sg12.png",
+        "description": "Gaerne SG-12 boots provide maximum durability and ankle protection. Ideal for demanding motocross and enduro conditions.",
+        "typ": "boot"
     }
 ]

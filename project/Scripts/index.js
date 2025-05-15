@@ -91,7 +91,7 @@ function renderHelmets(data) {
 }
 setTimeout(() => {
     renderHelmets(helmets);
-}, 100); // Warte 0.1 Sekunde, um sicherzustellen, dass die Daten geladen sind
+}, 1000); // Warte 0.1 Sekunde, um sicherzustellen, dass die Daten geladen sind
 
 
 function showLogIn() {
