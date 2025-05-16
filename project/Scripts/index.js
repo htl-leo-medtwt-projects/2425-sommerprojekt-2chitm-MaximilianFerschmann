@@ -52,8 +52,8 @@ function helmetSlider(value) {
     helmetImage.classList.remove("active");
     currentHelmetIndex += value;
     if (currentHelmetIndex < 0) {
-        currentHelmetIndex = helmets.length - 1;
-    } else if (currentHelmetIndex >= helmets.length) {
+        currentHelmetIndex = 4;
+    } else if (currentHelmetIndex >= 5) {
         currentHelmetIndex = 0;
     }
     setTimeout(() => {
