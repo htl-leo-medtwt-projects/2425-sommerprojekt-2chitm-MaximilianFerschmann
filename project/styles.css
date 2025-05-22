@@ -468,6 +468,113 @@ footer section{
     height: auto !important;
     margin: 10px !important;
 }
+@media screen and (max-width: 768px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #wrapper{
+        width:  100%;
+        overflow: hidden;
+    }
+    body{
+        padding: 0;
+    }
+    .backgroundKTM{
+        display: none;
+    }
+    nav{
+        flex-direction: column-reverse;
+    }
+    #homelink{
+        display: none;
+    }
+    nav *{
+        width: 100%;
+        text-align: center;
+        font-size: 25px !important;
+    }
+    #start{
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    #leftInfo, #rightInfo{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    #search-helmet, #create-bike{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    }
+    #search-helmet h2 {
+        width: 100%;
+    }
+    #search
+    #create-bike{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #home-slider{
+        width: 80%;
+        height: 40vh;
+    }
+    #helmet-slider{
+        width: 60%;
+    }
+    #helmet-slider img{
+        width: 70% !important;
+    }
+    #image-collage-index{
+        display: none;
+    }
+    footer{
+        flex-direction: column;
+        gap: 0;
+    }
+    .socials{
+        width: 20vw;
+        gap: 1vh;
+    }
+    .socials img {
+        width: 80%;
+    }
+    #footer-image {
+        width: 100% !important;
+    }
+    footer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        height: 20vh;
+    }
+    #helmet-slider-bottom #helmets-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #helmet-slider-bottom #helmets-container div{
+        width: 34vw;
+    }
+    #helmet-slider-bottom{
+        height: inherit;
+        margin: 4vh 0;
+        gap: 5vh;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+}
 
 
 
