@@ -1,0 +1,176 @@
+:root {
+    --ktm-orange: #f15a24; /* Knalliges KTM Orange */
+    --ktm-dark: #151008;  /* Schwarzbraun */
+    --ktm-light: #fdf8ef; /* Cremeweiß */
+    --ktm-gold: #ffc55c;  /* Helles Goldgelb */
+    --gray: #4a4a4a;
+    --font-main: 'Roboto', sans-serif;
+    --font-title: 'Spaceport', sans-serif;
+    --transition-time: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background: linear-gradient(180deg, rgba(210,210,210,1) 23%, rgba(242,119,26,1) 100%);
+    color: var(--ktm-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 1em;
+    min-height: 100vh;
+}
+
+/* Filterbereich */
+#filter {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+#filter button {
+    font-family: var(--font-main);
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 0.6em 1.5em;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--ktm-orange);
+    color: var(--ktm-light);
+    cursor: pointer;
+    transition: all var(--transition-time) ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#filter button:hover {
+    background-color: #e69900;
+    transform: translateY(-2px);
+}
+
+#filter button:active {
+    transform: translateY(0);
+}
+
+/* Container für die Produkt-Karten */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    width: 100%;
+    padding: 0 1em;
+    margin-bottom: 4em;
+}
+
+/* Einzelne Produkt-Karte */
+.gear-item {
+    background-color: var(--ktm-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    transition: transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
+    position: relative;
+    width: 23vw;
+}
+
+.gear-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Bilder in den Karten */
+.gear-item img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 1em;
+    transition: transform var(--transition-time);
+}
+
+.gear-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Überschriften */
+.gear-item h3 {
+    font-family: var(--font-title);
+    font-size: 1.2em;
+    color: var(--ktm-dark);
+    margin: 0.5em 0;
+}
+
+/* Beschreibungstext */
+.gear-item p {
+    font-size: 0.9em;
+    color: var(--gray);
+    margin-bottom: 1em;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* Detailbutton */
+.gear-item button {
+    font-family: var(--font-main);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--ktm-orange);
+    color: var(--ktm-light);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    transition: background-color var(--transition-time);
+}
+
+.gear-item button:hover {
+    background-color: #e69900;
+}
+
+/* Footer / Scroll to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    background-color: var(--ktm-orange);
+    color: var(--ktm-light);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color var(--transition-time);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#back-to-top:hover {
+    background-color: #e69900;
+}
+#filter button.active-filter {
+    background-color: #e69900 !important;
+    transform: translateY(-2px);
+}

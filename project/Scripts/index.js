@@ -139,14 +139,14 @@ const slides = [
             Schütze dich mit unseren hochwertigen Motorrad-Jacken und Protektoren,
             die Sicherheit und Komfort kombinieren.
         </p>
-        <img class="product-kategories-slider-img" src="Images/Clothing/jacket_protection.png">
+        <img class="product-kategories-slider-img" src="Images/Gloves/fox_dirtpaw.png">
         `,
     `
         <h1>Offroad Schuhe</h1>
         <p>
             Robuste und komfortable Schuhe für alle Geländebedingungen – perfekt geeignet für Trail und Rennstrecke.
         </p>
-        <img class="product-kategories-slider-img" src="Images/Boots/offroad_boots.png">
+        <img class="product-kategories-slider-img" src="Images/Boots/gaerne_sg12.png">
         `
 ];
 
