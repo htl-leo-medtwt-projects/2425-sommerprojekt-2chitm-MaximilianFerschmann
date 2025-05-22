@@ -37,12 +37,12 @@ let currentHelmetIndex = 0;
 let helmets = [];
 
 fetch('./Data/Helmets.json')
-  .then(response => response.json())
-  .then(data => {
-    helmets = data;
-    console.log(helmets);
-  })
-  .catch(error => console.error('Fehler:', error));
+    .then(response => response.json())
+    .then(data => {
+        helmets = data;
+        console.log(helmets);
+    })
+    .catch(error => console.error('Fehler:', error));
 
 
 function helmetSlider(value) {
@@ -97,12 +97,12 @@ setTimeout(() => {
 function showLogIn() {
 
     const loginContainer = document.getElementById('login_container');
-    if(loginContainer.style.display === 'flex') {
+    if (loginContainer.style.display === 'flex') {
         loginContainer.style.display = 'none';
         return
     }
     console.log('showLogIn function called');
-    if(localStorage.getItem('loggedInUser')) {
+    if (localStorage.getItem('loggedInUser')) {
         loginContainer.innerHTML = `
         <button id="Logout" onclick="logOut()">Log Out</button>
         `
@@ -110,7 +110,7 @@ function showLogIn() {
     } else {
         loginContainer.innerHTML = `
         <a href="./Pages/Log_in.html">Log In</a>
-        ` 
+        `
         loginContainer.style.display = 'flex';
     }
 }
@@ -119,3 +119,60 @@ function logOut() {
     const loginContainer = document.getElementById('login_container');
     loginContainer.style.display = 'none';
 }
+const slider = document.getElementById("product-kategories-slider");
+const leftBtn = document.querySelector(".slider-button-left");
+const rightBtn = document.querySelector(".slider-button-right");
+
+// Definiere verschiedene Inhalte als Strings (kann auch JSON sein)
+const slides = [
+    `
+        <h1>Cross und Visier Helme</h1>
+        <p>
+            Entdecke unsere Auswahl an Cross- und Visierhelmen, die sowohl für Offroad-Abenteuer
+            als auch für den Straßenverkehr geeignet sind.
+        </p>
+        <img class="product-kategories-slider-img" src="Images/Helmets/bell_moto_9s.png">
+        `,
+    `
+        <h1>Jackets & Protektoren</h1>
+        <p>
+            Schütze dich mit unseren hochwertigen Motorrad-Jacken und Protektoren,
+            die Sicherheit und Komfort kombinieren.
+        </p>
+        <img class="product-kategories-slider-img" src="Images/Clothing/jacket_protection.png">
+        `,
+    `
+        <h1>Offroad Schuhe</h1>
+        <p>
+            Robuste und komfortable Schuhe für alle Geländebedingungen – perfekt geeignet für Trail und Rennstrecke.
+        </p>
+        <img class="product-kategories-slider-img" src="Images/Boots/offroad_boots.png">
+        `
+];
+
+let currentIndex = 0;
+
+function updateSliderContent(index) {
+    index = index + currentIndex;
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    currentIndex = index;
+
+    slider.style.opacity = 0;
+
+    setTimeout(() => {
+        slider.innerHTML = slides[currentIndex];
+        slider.style.opacity = 1;
+    }, 200);
+}
+
+leftBtn.addEventListener("click", () => {
+    updateSliderContent(currentIndex - 1);
+});
+
+rightBtn.addEventListener("click", () => {
+    updateSliderContent(currentIndex + 1);
+});
+
+// Initialen Inhalt laden
+updateSliderContent(0);

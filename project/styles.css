@@ -458,6 +458,16 @@ footer section{
 #login_container button:active{
     transform: scale(0.95);
 }
+#product-kategories-slider {
+    text-align: center !important; 
+    transition: opacity 0.4s ease !important;
+}
+
+.product-kategories-slider-img {
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 10px !important;
+}
 
 
 

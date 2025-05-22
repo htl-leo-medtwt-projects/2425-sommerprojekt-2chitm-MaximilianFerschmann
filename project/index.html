@@ -39,7 +39,7 @@
             <div id="rightInfo">
                 <div id="helmet-slider">
                     <button class="slider-button-left" onclick="helmetSlider('-1')">
-                        <</button>
+                        << /button>
                             <img id="helmet-slider-image" class="active" src="Images/Helmets/agv_pista_gp_rr.png"
                                 alt="">
                             <button class="slider-button-right" onclick="helmetSlider('1')">></button>
@@ -57,23 +57,11 @@
         <div id="product-kategories">
             <h2>Product Kategorien</h2>
             <div>
-                <button class="slider-button-left"><</button>
+                <button class="slider-button-left" onclick="updateSliderContent(-1)"><</button>
                         <div id="product-kategories-slider">
-                            <div>
-                                <h1>Cross und Visier Helme</h1>
-                                <p>
-                                    Entdecke unsere Auswahl an Cross- und Visierhelmen, die sowohl für Offroad-Abenteuer
-                                    als auch für den Straßenverkehr geeignet sind. Unsere Helme bieten optimalen Schutz,
-                                    Komfort und Stil, damit du sicher und selbstbewusst unterwegs bist.
-                                </p>
-                            </div>
-                            <div>
-                                <img class="product-kategories-slider-img" src="Images/Helmets/bell_moto_9s.png">
-                                <img class="product-kategories-slider-img" src="Images/Helmets/oneal_3_series.png">
-                            </div>
-
+                            <!-- Wird dynamisch geändert -->
                         </div>
-                        <button class="slider-button-right">></button>
+                        <button class="slider-button-right" onclick="updateSliderContent(1)">></button>
             </div>
 
         </div>
