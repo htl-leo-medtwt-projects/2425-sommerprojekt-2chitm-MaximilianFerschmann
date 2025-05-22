@@ -75,7 +75,7 @@ function handleLogin() {
     return;
   }
 
-  localStorage.setItem("loggedInUser", username);
+  sessionStorage.setItem("loggedInUser", username);
   showMessage("Erfolgreich angemeldet!", true);
   form.reset();
   setTimeout(() => {
