@@ -113,6 +113,7 @@ function createKit(helmetName, gloveName, bootsName) {
     
     localStorage.setItem('user_' + user, JSON.stringify(userData));
     console.log("Neues Kit erstellt:", kit);
+    showKits(); // Aktualisiere die Anzeige der Kits
 }
 
 function populateKitSelectors() {
@@ -138,6 +139,29 @@ function fillSelect(selectElement, items) {
     });
 }
 
+function showKits() {
+    const user = localStorage.getItem('loggedInUser');
+    const userData = JSON.parse(localStorage.getItem('user_' + user));
+    const kits = userData.kits || [];
+    
+    const kitContainer = document.getElementById('kit-container');
+    kitContainer.innerHTML = ''; // Leeren des Containers
+
+    kits.forEach(kit => {
+        const kitDiv = document.createElement('div');
+        kitDiv.className = 'kit-item';
+        kitDiv.innerHTML = `
+            <h3>${kit.name}</h3>
+            <div class="kit-details">
+            <div><h3>${kit.helmet.name}</h3> <img src="../${kit.helmet.image}" alt="${kit.helmet.name}"></div>
+            <div><h3>${kit.gloves.name}</h3> <img src="../${kit.gloves.image}" alt="${kit.gloves.name}"></div>
+            <div><h3>${kit.boots.name}</h3> <img src="../${kit.boots.image}" alt="${kit.boots.name}"></div>
+            </div>
+        `;
+        kitContainer.appendChild(kitDiv);
+    });
+}
+
 document.getElementById('create-kit-btn').addEventListener('click', () => {
     const helmet = document.getElementById('helmet-select').value;
     const gloves = document.getElementById('glove-select').value;
@@ -153,5 +177,6 @@ document.getElementById('create-kit-btn').addEventListener('click', () => {
 setTimeout(() => {
     AOS.init();
     loadGear(gear); 
+    showKits(); // Zeige Kits nach dem Laden der Seite
 
 }, 300);

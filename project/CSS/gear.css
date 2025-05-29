@@ -274,3 +274,41 @@ body {
 #back:active {
     transform: scale(0.9);
 }
+#kit-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--ktm-light);
+    width: 80%;
+    margin-bottom: 5vh;
+}
+.kit-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    margin: 1%;
+    width: 100%;
+}
+.kit-item img {
+    width: 100%;
+}
+.kit-details {
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    background-color: var(--ktm-light);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    width: 80%;
+}
+.kit-details div {
+    width: 30%;
+    height: auto;
+    margin-right: 20px;
+}
+.kit-item h3 {
+    font-size: 2em;
+}
