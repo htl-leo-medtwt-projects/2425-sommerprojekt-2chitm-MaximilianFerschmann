@@ -85,18 +85,21 @@ backToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-let kits = localStorage; // Array für gespeicherte Kits
+ // Array für gespeicherte Kits
 
 function createKit(helmetName, gloveName, bootsName) {
     const helmet = gear.find(item => item.typ === 'helmet' && item.name === helmetName);
     const gloves = gear.find(item => item.typ === 'glove' && item.name === gloveName);
-    const boots = gear.find(item => item.typ === 'boots' && item.name === bootsName);
+    const boots = gear.find(item => item.typ === 'boot' && item.name === bootsName);
+    console.log(helmet,gloves,boots);
 
     if (!helmet || !gloves || !boots) {
         console.error("Ein oder mehrere Teile konnten nicht gefunden werden.");
         return;
     }
-
+    let user = localStorage.getItem('loggedInUser');
+    let userData = JSON.parse(localStorage.getItem('user_' + user));
+    let kits = userData.kits || [];
     const kit = {
         id: kits.length + 1,
         name: `Kit ${kits.length + 1}`,
@@ -104,11 +107,11 @@ function createKit(helmetName, gloveName, bootsName) {
         gloves,
         boots
     };
-
+    
     kits.push(kit);
-    let user = localStorage.getItem('loggedInUser');
-    let userData = JSON.parse(localStorage.getItem('user_' + user));
-    localStorage.setItem('user_' + user, JSON.stringify({ ...userData, kits: [...(userData.kits || []), kit] }));
+    userData.kits = kits;   
+    
+    localStorage.setItem('user_' + user, JSON.stringify(userData));
     console.log("Neues Kit erstellt:", kit);
 }
 
@@ -139,6 +142,7 @@ document.getElementById('create-kit-btn').addEventListener('click', () => {
     const helmet = document.getElementById('helmet-select').value;
     const gloves = document.getElementById('glove-select').value;
     const boots = document.getElementById('boots-select').value;
+    console.log(boots,gloves,helmet);
 
     createKit(helmet, gloves, boots);
 });
