@@ -7,7 +7,7 @@ fetch('../Data/Helmets.json')
         gear = data;
         console.log('Daten geladen:', gear);
         createFilterButtons();
-
+        populateKitSelectors();
     })
     .catch(error => console.error('Fehler beim Laden der Daten:', error));
 
@@ -85,7 +85,69 @@ backToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+let kits = localStorage; // Array für gespeicherte Kits
+
+function createKit(helmetName, gloveName, bootsName) {
+    const helmet = gear.find(item => item.typ === 'helmet' && item.name === helmetName);
+    const gloves = gear.find(item => item.typ === 'glove' && item.name === gloveName);
+    const boots = gear.find(item => item.typ === 'boots' && item.name === bootsName);
+
+    if (!helmet || !gloves || !boots) {
+        console.error("Ein oder mehrere Teile konnten nicht gefunden werden.");
+        return;
+    }
+
+    const kit = {
+        id: kits.length + 1,
+        name: `Kit ${kits.length + 1}`,
+        helmet,
+        gloves,
+        boots
+    };
+
+    kits.push(kit);
+    let user = localStorage.getItem('loggedInUser');
+    let userData = JSON.parse(localStorage.getItem('user_' + user));
+    localStorage.setItem('user_' + user, JSON.stringify({ ...userData, kits: [...(userData.kits || []), kit] }));
+    console.log("Neues Kit erstellt:", kit);
+}
+
+function populateKitSelectors() {
+    const helmetSelect = document.getElementById('helmet-select');
+    const gloveSelect = document.getElementById('glove-select');
+    const bootsSelect = document.getElementById('boots-select');
+
+    const helmets = gear.filter(item => item.typ === 'helmet');
+    const gloves = gear.filter(item => item.typ === 'glove');
+    const boots = gear.filter(item => item.typ === 'boot');
+
+    fillSelect(helmetSelect, helmets);
+    fillSelect(gloveSelect, gloves);
+    fillSelect(bootsSelect, boots);
+}
+
+function fillSelect(selectElement, items) {
+    items.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item.name;
+        option.textContent = item.name;
+        selectElement.appendChild(option);
+    });
+}
+
+document.getElementById('create-kit-btn').addEventListener('click', () => {
+    const helmet = document.getElementById('helmet-select').value;
+    const gloves = document.getElementById('glove-select').value;
+    const boots = document.getElementById('boots-select').value;
+
+    createKit(helmet, gloves, boots);
+});
+
+
+
+
 setTimeout(() => {
     AOS.init();
-    loadGear(gear); // Zeige alle Items an
+    loadGear(gear); 
+
 }, 300);

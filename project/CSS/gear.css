@@ -174,3 +174,77 @@ body {
     background-color: #e69900 !important;
     transform: translateY(-2px);
 }
+/* Kit Builder Container */
+#kit-builder {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Überschrift */
+#kit-builder h2 {
+    text-align: center;
+    color: #503d2c;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Label */
+#kit-builder label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #5e4834;
+}
+
+/* Select Boxen */
+#kit-builder select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#kit-builder select:focus {
+    outline: none;
+    border-color: orange;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Button */
+#create-kit-btn {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#create-kit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Anpassung für kleinere Bildschirme */
+@media (max-width: 500px) {
+    #kit-builder {
+        margin: 30px 20px;
+        padding: 20px;
+    }
+
+    #kit-builder h2 {
+        font-size: 20px;
+    }
+}

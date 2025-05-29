@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,25 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
+
 <body>
     <div id="filter"></div>
+    <div id="kit-builder">
+        <h2>Kit erstellen</h2>
+        <label for="helmet-select">Helm:</label>
+        <select id="helmet-select"></select>
+
+        <label for="glove-select">Handschuhe:</label>
+        <select id="glove-select"></select>
+
+        <label for="boots-select">Stiefel:</label>
+        <select id="boots-select"></select>
+
+        <button id="create-kit-btn">Kit erstellen</button>
+    </div>
+
     <div id="container"></div>
     <button id="back-to-top" title="Zurück nach oben">↑</button>
 </body>
+
 </html>

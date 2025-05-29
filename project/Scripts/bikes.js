@@ -92,7 +92,7 @@ function loadFilteredBikes() {
   loadBikes(filteredBikes);
 }
 function loadFavorites() {
-  let user = sessionStorage.getItem('loggedInUser');
+  let user = localStorage.getItem('loggedInUser');
   if (!user) {
     return;
   }
@@ -114,7 +114,7 @@ function loadFavorites() {
   })
 }
 function setFav(bikename) {
-  let user = sessionStorage.getItem('loggedInUser');
+  let user = localStorage.getItem('loggedInUser');
   if (!user) {
     alert('Bitte zuerst einloggen!');
     return;
@@ -132,7 +132,7 @@ function setFav(bikename) {
   loadFavorites();
 }
 function removeFav(bikename) {
-  let user = sessionStorage.getItem('loggedInUser');
+  let user = localStorage.getItem('loggedInUser');
   let userData = JSON.parse(localStorage.getItem('user_' + user));
   let favBikes = userData.favbikes || [];
   console.log(favBikes)

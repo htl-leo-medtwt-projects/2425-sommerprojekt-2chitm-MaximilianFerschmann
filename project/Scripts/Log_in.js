@@ -24,9 +24,9 @@ function showMessage(text, success = false) {
   messageDiv.textContent = text;
   messageDiv.style.color = success ? "#d4f4dd" : "#ffeb3b";
 }
-async function saveUser(username, password, favbikes) {
+async function saveUser(username, password, favbikes, kits) {
   const hashedPassword = await hashString(password); // Passwort hashen
-  localStorage.setItem("user_" + username, JSON.stringify({ username, password: hashedPassword, favbikes }));
+  localStorage.setItem("user_" + username, JSON.stringify({ username, password: hashedPassword, favbikes, kits }));
 }
 async function compareUser(username, password) {
   const user = getUser(username);
@@ -52,9 +52,9 @@ function handleRegister() {
     return;
   }
 
-  saveUser(username, password, []).then(() => {
+  saveUser(username, password, [], []).then(() => {
     showMessage("Registrierung erfolgreich!", true);
-    form.reset();
+    form.reset();     
   });
 }
 
@@ -75,7 +75,7 @@ function handleLogin() {
     return;
   }
 
-  sessionStorage.setItem("loggedInUser", username);
+  localStorage.setItem("loggedInUser", username);
   showMessage("Erfolgreich angemeldet!", true);
   form.reset();
   setTimeout(() => {
