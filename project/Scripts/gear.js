@@ -140,6 +140,10 @@ function fillSelect(selectElement, items) {
 }
 
 function showKits() {
+    if(!localStorage.getItem('loggedInUser')) {
+        console.log("Kein Benutzer angemeldet.");
+        return;
+    }
     const user = localStorage.getItem('loggedInUser');
     const userData = JSON.parse(localStorage.getItem('user_' + user));
     const kits = userData.kits || [];
@@ -157,11 +161,30 @@ function showKits() {
             <div><h3>${kit.gloves.name}</h3> <img src="../${kit.gloves.image}" alt="${kit.gloves.name}"></div>
             <div><h3>${kit.boots.name}</h3> <img src="../${kit.boots.image}" alt="${kit.boots.name}"></div>
             </div>
+            <button class="delete-kit-btn" onclick="deleteKit(${kit.id})">Löschen</button>
+            
         `;
         kitContainer.appendChild(kitDiv);
     });
+    AOS.refresh(); // Aktualisiere AOS nach dem Anzeigen der Kits
 }
-
+function deleteKit(kitId) {
+    setTimeout(() => {
+    let user = localStorage.getItem('loggedInUser');
+    let userData = JSON.parse(localStorage.getItem('user_' + user));
+    let kits = userData.kits || [];
+    
+    // Filtere das Kit heraus
+    kits = kits.filter(kit => kit.id !== kitId);
+    
+    // Aktualisiere die Kits im Local Storage
+    userData.kits = kits;
+    localStorage.setItem('user_' + user, JSON.stringify(userData));
+    
+    showKits();
+    }, 300);
+    AOS.refresh(); // Aktualisiere AOS nach dem Löschen
+}
 document.getElementById('create-kit-btn').addEventListener('click', () => {
     const helmet = document.getElementById('helmet-select').value;
     const gloves = document.getElementById('glove-select').value;

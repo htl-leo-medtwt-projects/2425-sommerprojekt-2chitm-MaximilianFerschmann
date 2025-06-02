@@ -234,28 +234,11 @@ body {
 }
 
 #create-kit-btn:hover {
-    background-color: #2980b9;
+    background-color: var(--ktm-orange);
 }
 
 /* Responsive Anpassung für kleinere Bildschirme */
-@media (max-width: 500px) {
-    #kit-builder {
-        margin: 30px 20px;
-        padding: 20px;
-    }
 
-    #kit-builder h2 {
-        font-size: 20px;
-    }
-    #container {
-        flex-direction: column;
-        align-items: center;
-    }
-    #container .gear-item {
-        width: 90%;
-        max-width: 400px;
-    }
-}
 #back{
     position: absolute;
     top: 5vh;
@@ -311,4 +294,86 @@ body {
 }
 .kit-item h3 {
     font-size: 2em;
+}
+.delete-kit-btn {
+    background-color: var(--ktm-orange);
+    color: var(--ktm-light);
+    border: none;
+    border-radius: 10px;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color var(--transition-time);
+    margin: 1vh 0;
+}
+.delete-kit-btn:hover {
+    background-color: #e69900;
+}
+.delete-kit-btn:active {
+    transform: scale(0.95);
+}
+@media (max-width: 768px) {
+    #kit-builder {
+        margin: 30px 20px;
+        padding: 20px;
+    }
+
+    #kit-builder h2 {
+        font-size: 20px;
+    }
+    #container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #container .gear-item {
+        width: 90%;
+        max-width: 400px;
+    }
+    #kit-container {
+        width: 100%; 
+    }
+    .kit-item {
+        width: 100%;
+    }
+    .kit-details {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+    .kit-item img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 70%;
+    }
+    .kit-item h3{
+        font-size: 1.1em;
+        text-align: center;
+    }
+    .kit-details div {
+        width: 80%;
+        margin-right: 0;
+        padding: 15px 0;
+        border-bottom: #151008 1px solid;
+        border-top: #151008 1px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .delete-kit-btn {
+        width: 30%;
+        margin: 2vh 0;
+        font-size: 0.9em;
+    }
+    #filter {
+        align-items: center;
+        margin-top: 7vh;
+    }
+    #back{
+        top: 3vh;
+        left: 2vw;
+        padding: 2.2%;
+        font-size: 1.8em;
+    }
 }

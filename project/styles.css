@@ -573,6 +573,10 @@ footer section{
         justify-content: center;
         width: 100%;
     }
+    .product-kategories-slider-img {
+        width: 55%;
+        height: auto !important;
+    }
 
 }
 

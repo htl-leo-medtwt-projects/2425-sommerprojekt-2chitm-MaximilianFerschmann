@@ -52,14 +52,14 @@ function handleRegister() {
     return;
   }
 
-  saveUser(username, password, [], []).then(() => {
+  saveUser(username.toLowerCase(), password, [], []).then(() => {
     showMessage("Registrierung erfolgreich!", true);
     form.reset();     
   });
 }
 
 function handleLogin() {
-  const username = document.getElementById("username").value.trim();
+  let username = document.getElementById("username").value.trim();
   let password = document.getElementById("password").value;
 
 
