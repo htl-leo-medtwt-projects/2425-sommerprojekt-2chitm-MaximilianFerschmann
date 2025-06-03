@@ -125,3 +125,97 @@
     font-size: 2em;
     transition: color 0.3s ease;
   }
+/* Tablet & kleine Bildschirme */
+@media (max-width: 992px) {
+  .container {
+    width: 60%;
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 20px;
+    border-radius: 10px;
+  }
+
+  form {
+    transform: scale(1);
+    width: 90%;
+    max-width: 350px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile Landscape / kleinere Tablets */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 30px 20px;
+    border-radius: 10px;
+  }
+
+  form {
+    transform: scale(0.9);
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .toggle-btn {
+    font-size: 12px;
+  }
+
+  #message {
+    font-size: 12px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 576px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+
+  form {
+    transform: scale(0.85);
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+  }
+
+  a {
+    font-size: 1.5em;
+  }
+}

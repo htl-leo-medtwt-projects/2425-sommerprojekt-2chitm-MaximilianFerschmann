@@ -52,6 +52,7 @@ function loadBikeDetails(bikename) {
   } else {
     console.log('Bike not found');
   }
+  AOS.refresh(); // Refresh AOS to apply animations to the new content
 
 }
 document.addEventListener('keydown', function (event) {
@@ -63,6 +64,7 @@ function closeDetails() {
   detailContainer.className = 'hidden';
   bikesContainer.style.opacity = '1';
   document.getElementById('filter').style.opacity = '1';
+  AOS.refresh(); // Refresh AOS to apply animations to the new content
 }
 
 function loadFilteredBikes() {
@@ -90,6 +92,7 @@ function loadFilteredBikes() {
   // Container leeren und gefilterte Bikes lade
   bikesContainer.innerHTML = ''; 
   loadBikes(filteredBikes);
+  AOS.refresh(); // Refresh AOS to apply animations to the new content
 }
 function loadFavorites() {
   let user = localStorage.getItem('loggedInUser');
@@ -112,6 +115,7 @@ function loadFavorites() {
             `;
     }
   })
+  AOS.refresh(); // Refresh AOS to apply animations to the new content
 }
 function setFav(bikename) {
   let user = localStorage.getItem('loggedInUser');
@@ -130,6 +134,7 @@ function setFav(bikename) {
     localStorage.setItem('user_' + user, JSON.stringify(userData));
   }
   loadFavorites();
+  AOS.refresh(); // Refresh AOS to apply animations to the new content
 }
 function removeFav(bikename) {
   let user = localStorage.getItem('loggedInUser');
@@ -143,7 +148,8 @@ function removeFav(bikename) {
   }
   setTimeout(() => {
     loadFavorites();
-  }, 500); 
+  }, 500);
+  AOS.refresh(); // Refresh AOS to apply animations to the new content 
   
 }
 
@@ -161,6 +167,7 @@ function loadBikes(bikes){
 
   });
  // Re-initialize AOS after loading new content
+  AOS.refresh(); // Refresh AOS to apply animations to the new content
 }
 const backToTopBtn = document.getElementById("back-to-top");
 

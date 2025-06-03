@@ -22,6 +22,9 @@
 * {
   font-family: 'Roboto', sans-serif !important;
 }
+body {
+  overflow: hidden;
+}
 
 /* Überschreiben spezifischer Klassen und IDs */
 header h1,
@@ -287,4 +290,86 @@ header h1 span {
   z-index: -1;
   color: transparent;
   -webkit-text-stroke: 5px var(--scharz);	
+}
+/* Tablet / kleinere Laptops */
+@media (max-width: 991px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .engine-info .label,
+  .engine-info .description {
+    font-size: 1.2rem;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section,
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .question-container {
+    justify-content: center;
+  }
+
+  #answer1,
+  #answer2 {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  #title {
+    font-size: 1.5rem;
+  }
+  .container{
+    width: 90%;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  #question {
+    font-size: 1.2rem;
+  }
+
+  .engine-info .description {
+    font-size: 1rem;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .backgroundKTM {
+    display: none;
+  }
+  main{
+    height: 50vh;
+    gap: 1vh;
+  }
+  main p {
+    font-size: 0.8rem !important;
+    text-align: center;
+  }
+  #image {
+    width: 80%;
+    height: auto;
+  }
 }
